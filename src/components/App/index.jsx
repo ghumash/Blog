@@ -1,24 +1,25 @@
-import React from "react";
+import { useState } from "react";
 
-import "./App.css";
+import { posts as userPosts, users as authors } from "../../js/const";
 import Post from "../Post";
 
-import POSTS from "../../js/posts";
-import USERS from "../../js/users";
+import Container from '@mui/material/Container';
 
-export default function App() {
-  const [posts, setPosts] = React.useState(POSTS);
-  const [users, setUsers] = React.useState(USERS);
+function App() {
+  const [posts, setPosts] = useState(userPosts);
+  const [users] = useState(authors);
 
   const findUser = (userId) => {
-    users.find((user) => user.id === userId);
+    return users.find((user) => user.id === userId);
   };
-  
+
   return (
-    <div>
-      {POSTS.map((post) => (
-        <Post key={post.id} user={findUser(post.userId)} />
+    <Container maxWidth="xl">
+      {posts.map((post) => (
+        <Post key={post.id} post={post} user={findUser(post.userId)} />
       ))}
-    </div>
+    </Container>
   );
 }
+
+export default App;
