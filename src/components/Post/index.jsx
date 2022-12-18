@@ -11,21 +11,15 @@ export default function Post({ post, user }) {
 
   return (
     <div className="post-container">
-      <h3>{post.title}</h3>
-      <div>
-        {user.name} {user.surname}
-        <br />
-        <br />
-      </div>
+      <h3 style={{ marginBottom: "0" }}>{post.title}</h3>
+      {user.name} {user.surname}
+      <br />
       Posted {post.createdAt}
+      <br />
       <br />
       {seeMoreStatus ? post.text : truncate(post.text, POST_DEFAULT_LENGTH)}
       {post.text.length > POST_DEFAULT_LENGTH && (
-        <b>
-          <span onClick={seeMoreToggle}>
-            {seeMoreStatus ? "see less" : "see more"}
-          </span>
-        </b>
+        <b onClick={seeMoreToggle}>{seeMoreStatus ? "See Less" : "See More"}</b>
       )}
       {post.modifiedAt && <p>Modified {post.modifiedAt}</p>}
     </div>
