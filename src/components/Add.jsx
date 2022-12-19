@@ -9,34 +9,17 @@ import {
   Fab,
   Modal,
   Stack,
-  styled,
   TextField,
   Tooltip,
   Typography,
 } from "@mui/material";
+
 import { useToggle } from "../hooks/useToggle";
+import { modalStyles } from "./custom/mui.styles";
+import { UserBox } from "./custom/mui.components";
 
 export default function Add() {
   const { status: modal, toggleStatus: setModal } = useToggle();
-
-  const UserBox = styled(Box)({
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    marginBottom: "20px",
-  });
-
-  const modalStyles = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    bgcolor: "white",
-    borderRadius: 5,
-    boxShadow: 24,
-    p: 4,
-  };
 
   return (
     <>

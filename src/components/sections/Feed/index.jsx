@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Post from "./Post";
+import Post from "../../shared/Post";
 
 export default function Feed() {
   return (

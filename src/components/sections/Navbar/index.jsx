@@ -1,49 +1,17 @@
 import React from "react";
 
 import { AutoAwesomeMotion, Mail, Notifications } from "@mui/icons-material";
+import { AppBar, Badge, InputBase, Typography } from "@mui/material";
 
+import Profile from "../../shared/Profile";
 import {
-  AppBar,
-  Badge,
-  Box,
-  InputBase,
-  styled,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import Profile from "./Profile";
+  StyledToolbar,
+  Search,
+  Icons,
+  UserBoxMobile,
+} from "../../../custom/mui.components";
 
 export default function Navbar() {
-  const StyledToolbar = styled(Toolbar)({
-    display: "flex",
-    justifyContent: "space-between",
-  });
-
-  const Search = styled("div")(({ theme }) => ({
-    backgroundColor: "white",
-    padding: "0 10px",
-    borderRadius: theme.shape.borderRadius,
-    width: "40%",
-  }));
-
-  const Icons = styled(Box)(({ theme }) => ({
-    display: "none",
-    alignItems: "center",
-    gap: "20px",
-    [theme.breakpoints.up("sm")]: {
-      display: "flex",
-    },
-  }));
-
-  const UserBox = styled(Box)(({ theme }) => ({
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-    },
-  }));
-
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -51,7 +19,7 @@ export default function Navbar() {
           Blog
         </Typography>
         <AutoAwesomeMotion sx={{ display: { xs: "block", sm: "none" } }} />
-        <Search>
+        <Search sx={{ bgcolor: "background.default", color: "text.primary" }}>
           <InputBase placeholder="Search..." />
         </Search>
         <Icons>
@@ -63,10 +31,10 @@ export default function Navbar() {
           </Badge>
           <Profile />
         </Icons>
-        <UserBox>
+        <UserBoxMobile>
           <Typography variant="span">John</Typography>
           <Profile />
-        </UserBox>
+        </UserBoxMobile>
       </StyledToolbar>
     </AppBar>
   );

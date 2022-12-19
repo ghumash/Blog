@@ -20,7 +20,7 @@ import {
   Switch,
 } from "@mui/material";
 
-export default function Sidebar() {
+export default function Sidebar({ mode, setMode }) {
   return (
     <Box flex={1} p={2} display={{ xs: "none", sm: "block" }}>
       <Box position="fixed">
@@ -86,7 +86,7 @@ export default function Sidebar() {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch />
+              <Switch onChange={()=>setMode(mode === "light"? "dark": "light")}/>
             </ListItemButton>
           </ListItem>
         </List>
