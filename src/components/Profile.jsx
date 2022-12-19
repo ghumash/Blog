@@ -21,11 +21,7 @@ export default function Profile() {
 
   return (
     <Box>
-      <Avatar
-        onClick={handleClick}
-        alt="Remy Sharp"
-        src="./assets/avatars/avatar_9.jpg"
-      />
+      <Avatar onClick={handleClick} src="./assets/avatars/avatar_9.jpg" />
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
@@ -61,7 +57,8 @@ export default function Profile() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem>
-          <Avatar /> Profile
+          <Avatar onClick={handleClick} src="./assets/avatars/avatar_9.jpg" />{" "}
+          Profile
         </MenuItem>
         <Divider />
         <MenuItem>

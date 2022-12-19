@@ -4,7 +4,6 @@ import { AutoAwesomeMotion, Mail, Notifications } from "@mui/icons-material";
 
 import {
   AppBar,
-  Avatar,
   Badge,
   Box,
   InputBase,
