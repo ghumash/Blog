@@ -15,8 +15,8 @@ import {
 } from "@mui/material";
 
 import { useToggle } from "../hooks/useToggle";
-import { modalStyles } from "./custom/mui.styles";
-import { UserBox } from "./custom/mui.components";
+import { modalStyles } from "../custom/mui.styles";
+import { UserBox } from "../custom/mui.components";
 
 export default function Add() {
   const { status: modal, toggleStatus: setModal } = useToggle();

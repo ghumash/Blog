@@ -32,7 +32,7 @@ export default function Profile() {
         onClick={handleClose}
         PaperProps={{
           elevation: 0,
-          sx: { profileMenuStyles },
+          sx: { ...profileMenuStyles },
         }}
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}

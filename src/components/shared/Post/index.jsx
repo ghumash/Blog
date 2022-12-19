@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Favorite, FavoriteBorder, MoreVert, Share } from "@mui/icons-material";
+import { Favorite, FavoriteBorder, Share } from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -12,17 +12,14 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
+import PostMenu from "./PostMenu";
 
 export default function Post() {
   return (
     <Card sx={{ m: 5 }}>
       <CardHeader
         avatar={<Avatar src="/assets/avatars/avatar_8.jpg" />}
-        action={
-          <IconButton aria-label="settings">
-            <MoreVert />
-          </IconButton>
-        }
+        action={<PostMenu />}
         title="Shrimp and Chorizo Paella"
         subheader="September 14, 2016"
       />
