@@ -1,24 +1,25 @@
 import React from "react";
 
-import {
-  AccountBox,
-  Favorite,
-  Group,
-  Home,
-  ModeNight,
-  Pages,
-  Settings,
-} from "@mui/icons-material";
-import { Box, List, Switch } from "@mui/material";
+import { Favorite, Home, ModeNight, Settings } from "@mui/icons-material";
+import { Box, List, Switch, useTheme } from "@mui/material";
 import SidebarItem from "./SidebarItem";
 
 export default function Sidebar({ mode, setMode }) {
+  const theme = useTheme();
+
   return (
-    <Box flex={1} p={2} display={{ xs: "none", sm: "block" }}>
+    <Box
+      p={2}
+      flex={{
+        xs: "0",
+        [theme.breakpoints.up("md")]: {
+          flex: "1",
+        },
+      }}
+    >
       <Box position="fixed">
         <List>
           <SidebarItem name={"Homepage"} icon={<Home />} />
-          <SidebarItem name={"Profile"} icon={<AccountBox />} />
           <SidebarItem name={"Favorites"} icon={<Favorite />} />
           <SidebarItem name={"Settings"} icon={<Settings />} />
           <SidebarItem icon={<ModeNight />}>

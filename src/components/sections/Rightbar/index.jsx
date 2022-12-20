@@ -7,9 +7,6 @@ import {
   ImageList,
   ImageListItem,
   List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
   Typography,
 } from "@mui/material";
 import CommentsItem from "./CommentsItem";

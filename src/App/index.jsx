@@ -7,8 +7,12 @@ import Rightbar from "../components/sections/Rightbar";
 import Sidebar from "../components/sections/Sidebar";
 import Add from "../components/Add";
 
+import { posts as userPosts, users as authors } from "../js/const";
+
 export default function App() {
   const [mode, setMode] = React.useState("light");
+  const [posts, setPosts] = React.useState(userPosts);
+  const [users, setUsers] = React.useState(authors);
 
   const darkTheme = createTheme({
     palette: {
@@ -22,7 +26,7 @@ export default function App() {
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-evenly">
           <Sidebar mode={mode} setMode={setMode} />
-          <Feed />
+          <Feed posts={posts} />
           <Rightbar />
         </Stack>
         <Add />

@@ -70,8 +70,8 @@ export default function Add() {
             <Image color="secondary" />
           </Stack>
           <ButtonGroup variant="contained" fullWidth>
-            <Button>Post</Button>
             <Button color="error">Cancel</Button>
+            <Button color="success">Post</Button>
           </ButtonGroup>
         </Box>
       </Modal>

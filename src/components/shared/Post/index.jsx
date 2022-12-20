@@ -14,25 +14,23 @@ import {
 } from "@mui/material";
 import PostMenu from "./PostMenu";
 
-export default function Post() {
+export default function Post({ post, user }) {
   return (
     <Card sx={{ m: 5 }}>
       <CardHeader
         avatar={<Avatar src="/assets/avatars/avatar_8.jpg" />}
         action={<PostMenu />}
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={post.title}
+        subheader={post.createdAt}
       />
       <CardMedia
         component="img"
         image="/assets/covers/cover_3.jpg"
-        alt="Paella dish"
+        alt={post.title}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          {post.text}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
