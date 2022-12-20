@@ -9,7 +9,7 @@ import {
   List,
   Typography,
 } from "@mui/material";
-import CommentsItem from "./CommentsItem";
+import CommentsItem from "../../shared/CommentsItem";
 
 export default function Rightbar() {
   return (
@@ -61,18 +61,6 @@ export default function Rightbar() {
             surname={"Connors"}
             imgUrl={"avatar_14.jpg"}
             text={" — I'll be in your neighborhood doing errands this…"}
-          />
-          <CommentsItem
-            name={"Remy"}
-            surname={"Sharp"}
-            imgUrl={"avatar_15.jpg"}
-            text={" — Wish I could come, but I'm out of town this…"}
-          />
-          <CommentsItem
-            name={"Sandra"}
-            surname={"Darrel"}
-            imgUrl={"avatar_16.jpg"}
-            text={" — Do you have Paris recommendations? Have you ever…"}
           />
         </List>
       </Box>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Favorite, FavoriteBorder, Share } from "@mui/icons-material";
+import { Comment, Favorite, FavoriteBorder, Share } from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -14,24 +14,51 @@ import {
 } from "@mui/material";
 import PostMenu from "./PostMenu";
 
+import truncate from "truncate";
+import { POST_DEFAULT_LENGTH } from "../../../js/const";
+import { useToggle } from "../../../hooks/useToggle";
+import PostComments from "../../PostComments";
+
 export default function Post({ post, user }) {
+  const { status: allPostVisible, toggleStatus: setAllPostVisible } =
+    useToggle();
+  const { status: commentStatus, toggleStatus: commentStatusToggle } =
+    useToggle();
+
   return (
     <Card sx={{ m: 5 }}>
       <CardHeader
         avatar={<Avatar src="/assets/avatars/avatar_8.jpg" />}
         action={<PostMenu />}
         title={post.title}
-        subheader={post.createdAt}
+        subheader={
+          <>
+            {post.createdAt}
+            {post.modifiedAt && <div>Modified {post.modifiedAt}</div>}
+          </>
+        }
       />
       <CardMedia
         component="img"
         image="/assets/covers/cover_3.jpg"
         alt={post.title}
       />
+
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          {post.text}
-        </Typography>
+        {allPostVisible ? (
+          <Typography variant="body2" color="text.secondary">
+            {post.text}
+          </Typography>
+        ) : (
+          <Typography variant="body2" color="text.secondary">
+            {truncate(post.text, POST_DEFAULT_LENGTH)}
+          </Typography>
+        )}
+        {post.text.length > POST_DEFAULT_LENGTH && (
+          <span onClick={setAllPostVisible}>
+            {allPostVisible ? "See less" : "See more"}
+          </span>
+        )}
       </CardContent>
       <CardActions disableSpacing>
         <Checkbox
@@ -41,7 +68,15 @@ export default function Post({ post, user }) {
         <IconButton aria-label="share">
           <Share />
         </IconButton>
+        <IconButton onClick={commentStatusToggle} aria-label="share">
+          <Comment />
+          {!!post.comments.length && `${post.comments.length}`}
+        </IconButton>
       </CardActions>
+      {commentStatus &&
+        post?.comments.map((comment) => (
+          <PostComments key={comment.id} comment={comment} />
+        ))}
     </Card>
   );
 }

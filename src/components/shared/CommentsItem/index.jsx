@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-export default function CommentsItem({ imgUrl, name, surname, text }) {
+export default function CommentsItem({ imgUrl, name, surname, text, date }) {
   return (
     <>
       <ListItem alignItems="flex-start">
@@ -24,7 +24,7 @@ export default function CommentsItem({ imgUrl, name, surname, text }) {
                 variant="body2"
                 color="text.primary"
               >
-                {name} {surname}
+                {name} {surname} {date}
               </Typography>
               {text}
             </>
