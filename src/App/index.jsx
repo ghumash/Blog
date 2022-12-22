@@ -23,9 +23,11 @@ export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor="background.default" color="text.primary">
-        <Navbar />
+        <Navbar mode={mode} setMode={setMode} />
         <Stack direction="row" spacing={2} justifyContent="space-evenly">
-          <Sidebar mode={mode} setMode={setMode} />
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <Sidebar mode={mode} setMode={setMode} />
+          </Box>
           <Feed posts={posts} />
           <Rightbar />
         </Stack>

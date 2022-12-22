@@ -10,6 +10,7 @@ import {
   CardMedia,
   Checkbox,
   IconButton,
+  TextField,
   Typography,
 } from "@mui/material";
 import PostMenu from "./PostMenu";
@@ -17,7 +18,8 @@ import PostMenu from "./PostMenu";
 import truncate from "truncate";
 import { POST_DEFAULT_LENGTH } from "../../../js/const";
 import { useToggle } from "../../../hooks/useToggle";
-import PostComments from "../../PostComments";
+import CommentsItem from "../CommentsItem";
+import CommentArea from "./PostComment/CommentArea";
 
 export default function Post({ post, user }) {
   const { status: allPostVisible, toggleStatus: setAllPostVisible } =
@@ -28,7 +30,7 @@ export default function Post({ post, user }) {
   return (
     <Card sx={{ m: 5 }}>
       <CardHeader
-        avatar={<Avatar src="/assets/avatars/avatar_8.jpg" />}
+        avatar={<Avatar src={`/assets/avatars/${post.userImg}`} />}
         action={<PostMenu />}
         title={post.title}
         subheader={
@@ -40,7 +42,7 @@ export default function Post({ post, user }) {
       />
       <CardMedia
         component="img"
-        image="/assets/covers/cover_3.jpg"
+        image={`/assets/covers/${post.cover}`}
         alt={post.title}
       />
 
@@ -70,13 +72,19 @@ export default function Post({ post, user }) {
         </IconButton>
         <IconButton onClick={commentStatusToggle} aria-label="share">
           <Comment />
-          {!!post.comments.length && `${post.comments.length}`}
         </IconButton>
+        {!!post.comments.length && (
+          <Typography>{post.comments.length}</Typography>
+        )}
       </CardActions>
-      {commentStatus &&
-        post?.comments.map((comment) => (
-          <PostComments key={comment.id} comment={comment} />
-        ))}
+      {commentStatus && (
+        <>
+          <CommentArea />
+          {post.comments?.map((comment) => (
+            <CommentsItem key={comment.id} comment={comment} />
+          ))}
+        </>
+      )}
     </Card>
   );
 }

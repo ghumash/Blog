@@ -1,4 +1,4 @@
-import { Box, styled, Toolbar } from "@mui/material";
+import { Box, styled, TextField, Toolbar } from "@mui/material";
 
 export const UserBox = styled(Box)({
   display: "flex",
@@ -36,3 +36,16 @@ export const UserBoxMobile = styled(Box)(({ theme }) => ({
     display: "none",
   },
 }));
+
+export const CommentTextArea = styled(TextField)({
+  "& > label": {
+    marginLeft: "5px",
+  },
+  "& > div": {
+    padding: "30px 16px",
+    borderRadius: "0",
+    "&:after,&:before": {
+      display: "none",
+    },
+  },
+});

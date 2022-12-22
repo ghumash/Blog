@@ -13,7 +13,7 @@ import CommentsItem from "../../shared/CommentsItem";
 
 export default function Rightbar() {
   return (
-    <Box flex={2} display={{ xs: "none", sm: "block" }}>
+    <Box flex={2} sx={{ display: { xs: "none", md: "block" } }}>
       <Box p={2}>
         <Typography variant="h6" fontWeight={100} mt={1} mb={1}>
           Online Friends
@@ -57,10 +57,12 @@ export default function Rightbar() {
           sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
         >
           <CommentsItem
-            name={"Ali"}
-            surname={"Connors"}
-            imgUrl={"avatar_14.jpg"}
-            text={" — I'll be in your neighborhood doing errands this…"}
+            comment={{
+              userId: "Ali",
+              text: " — I'll be in your neighborhood doing errands this…",
+              createdAt: "2022-12-15",
+              userAvatar: "avatar_19.jpg",
+            }}
           />
         </List>
       </Box>
