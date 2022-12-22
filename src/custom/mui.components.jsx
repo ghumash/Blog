@@ -36,16 +36,3 @@ export const UserBoxMobile = styled(Box)(({ theme }) => ({
     display: "none",
   },
 }));
-
-export const CommentTextArea = styled(TextField)({
-  "& > label": {
-    marginLeft: "5px",
-  },
-  "& > div": {
-    padding: "30px 16px",
-    borderRadius: "0",
-    "&:after,&:before": {
-      display: "none",
-    },
-  },
-});
