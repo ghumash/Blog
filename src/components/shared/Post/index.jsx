@@ -29,7 +29,7 @@ export default function Post({ post, user }) {
   return (
     <Card sx={{ m: 5 }}>
       <CardHeader
-        avatar={<Avatar src={`/assets/avatars/${post.userImg}`} />}
+        avatar={<Avatar src={`./assets/avatars/${post.userImg}`} />}
         action={<PostMenu />}
         title={post.title}
         subheader={
@@ -41,7 +41,7 @@ export default function Post({ post, user }) {
       />
       <CardMedia
         component="img"
-        image={`/assets/covers/${post.cover}`}
+        image={`./assets/covers/${post.cover}`}
         alt={post.title}
       />
 

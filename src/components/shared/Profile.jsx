@@ -38,7 +38,7 @@ export default function Profile() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem>
-          <Avatar onClick={handleClick} src="./assets/avatars/avatar_9.jpg" />{" "}
+          <Avatar onClick={handleClick} src="./assets/avatars/avatar_9.jpg" />
           Profile
         </MenuItem>
         <Divider />

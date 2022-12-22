@@ -13,7 +13,7 @@ export default function CommentsItem({ comment }) {
       <ListItemAvatar>
         <Avatar
           alt="Remy Sharp"
-          src={`/assets/avatars/${comment.userAvatar}`}
+          src={`./assets/avatars/${comment.userAvatar}`}
         />
       </ListItemAvatar>
       <ListItemText
