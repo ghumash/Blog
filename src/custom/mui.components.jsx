@@ -1,4 +1,4 @@
-import { Box, styled, TextField, Toolbar } from "@mui/material";
+import { Box, styled, Toolbar } from "@mui/material";
 
 export const UserBox = styled(Box)({
   display: "flex",

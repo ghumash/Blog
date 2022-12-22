@@ -4,11 +4,9 @@ import { Mail, Menu, Notifications } from "@mui/icons-material";
 import {
   AppBar,
   Badge,
-  Fab,
   IconButton,
   InputBase,
   SwipeableDrawer,
-  Tooltip,
   Typography,
 } from "@mui/material";
 

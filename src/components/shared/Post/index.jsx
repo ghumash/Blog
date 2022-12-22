@@ -10,7 +10,6 @@ import {
   CardMedia,
   Checkbox,
   IconButton,
-  TextField,
   Typography,
 } from "@mui/material";
 import PostMenu from "./PostMenu";

@@ -19,35 +19,35 @@ export default function Rightbar() {
           Online Friends
         </Typography>
         <AvatarGroup max={6} sx={{ mb: 2 }}>
-          <Avatar src="/assets/avatars/avatar_1.jpg" />
-          <Avatar src="/assets/avatars/avatar_2.jpg" />
-          <Avatar src="/assets/avatars/avatar_3.jpg" />
-          <Avatar src="/assets/avatars/avatar_4.jpg" />
-          <Avatar src="/assets/avatars/avatar_5.jpg" />
-          <Avatar src="/assets/avatars/avatar_6.jpg" />
-          <Avatar src="/assets/avatars/avatar_7.jpg" />
+          <Avatar src="/assets/avatars/avatar_1.jpg" alt="" />
+          <Avatar src="/assets/avatars/avatar_2.jpg" alt="" />
+          <Avatar src="/assets/avatars/avatar_3.jpg" alt="" />
+          <Avatar src="/assets/avatars/avatar_4.jpg" alt="" />
+          <Avatar src="/assets/avatars/avatar_5.jpg" alt="" />
+          <Avatar src="/assets/avatars/avatar_6.jpg" alt="" />
+          <Avatar src="/assets/avatars/avatar_7.jpg" alt="" />
         </AvatarGroup>
         <Typography variant="h6" fontWeight={100} mb={1}>
           Latest Posts
         </Typography>
         <ImageList cols={3} rowHeight={100} gap={5} sx={{ mb: 2 }}>
           <ImageListItem>
-            <img src="/assets/covers/cover_1.jpg" />
+            <img src="/assets/covers/cover_1.jpg" alt="" />
           </ImageListItem>
           <ImageListItem>
-            <img src="/assets/covers/cover_2.jpg" />
+            <img src="/assets/covers/cover_2.jpg" alt="" />
           </ImageListItem>
           <ImageListItem>
-            <img src="/assets/covers/cover_3.jpg" />
+            <img src="/assets/covers/cover_3.jpg" alt="" />
           </ImageListItem>
           <ImageListItem>
-            <img src="/assets/covers/cover_4.jpg" />
+            <img src="/assets/covers/cover_4.jpg" alt="" />
           </ImageListItem>
           <ImageListItem>
-            <img src="/assets/covers/cover_5.jpg" />
+            <img src="/assets/covers/cover_5.jpg" alt="" />
           </ImageListItem>
           <ImageListItem>
-            <img src="/assets/covers/cover_6.jpg" />
+            <img src="/assets/covers/cover_6.jpg" alt="" />
           </ImageListItem>
         </ImageList>
         <Typography variant="h6" fontWeight={100}>
