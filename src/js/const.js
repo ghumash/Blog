@@ -38,12 +38,12 @@ export const users = [
   },
   {
     id: "user_1",
-    neme: "Joost",
+    name: "Joost",
     surname: "Fergal",
   },
   {
     id: "user_2",
-    neme: "Sherri",
+    name: "Sherri",
     surname: "Hedwig",
   },
 ];

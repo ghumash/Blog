@@ -6,8 +6,11 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { users } from "../../../js/const";
 
 export default function CommentsItem({ comment }) {
+  const currentUser = users.find((user) => user.id == comment.userId);
+
   return (
     <ListItem alignItems="flex-start">
       <ListItemAvatar>
@@ -17,7 +20,11 @@ export default function CommentsItem({ comment }) {
         />
       </ListItemAvatar>
       <ListItemText
-        primary={comment?.userId}
+        primary={
+          <>
+            {currentUser?.name} {currentUser?.surname}
+          </>
+        }
         secondary={
           <>
             <Typography
@@ -26,11 +33,11 @@ export default function CommentsItem({ comment }) {
               variant="body2"
               color="text.primary"
             ></Typography>
-            {comment?.text}
+            {comment.text}
             <span
               style={{ display: "block", fontSize: "12px", marginTop: "5px" }}
             >
-              {comment?.createdAt}
+              {comment.createdAt}
             </span>
           </>
         }

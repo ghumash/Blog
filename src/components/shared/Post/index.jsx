@@ -95,9 +95,11 @@ export default function Post({ post, user }) {
       {commentStatus && (
         <>
           <CommentArea />
-          {post.comments?.map((comment) => (
-            <CommentsItem key={comment.id} comment={comment} />
-          ))}
+          {post?.comments.length !== 0
+            ? post.comments.map((comment) => (
+                <CommentsItem key={comment.id} comment={comment} />
+              ))
+            : false}
         </>
       )}
     </Card>
