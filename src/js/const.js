@@ -28,6 +28,26 @@ export const posts = [
       },
     ],
   },
+  {
+    id: uuid(),
+    createdAt: "2022-12-18",
+    userId: "user_1",
+    userImg: "avatar_20.jpg",
+    modifiedAt: "",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Q rationriores eveniet enim in. Nemo, ab quia magni a error eum illum recusandae, modi maxime optio excepts voluptatem nesciunt libero provident consequatur itaque quam impedit inventore placeat maiores dignissimos? Ab explicabo iusto dignissimos iure ullam placeat cum blanditiis laborum molestiae ipsa, corporis deleniti? Qui, quasi. Minus dolores ducimus, unde a corrupti laboriosam, doloremque at magnam eaque ut commodi.",
+    category: "Any category",
+    title: "Perfect design",
+    cover: "cover_20.jpg",
+    comments: [
+      {
+        id: uuid(),
+        userId: "user_2",
+        userAvatar: "avatar_16.jpg",
+        text: "Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put. Be it reserved contempt rendered smallest. Studied to passage it mention calling believe an. Get ten horrible ",
+        createdAt: "2022-12-15",
+      },
+    ],
+  },
 ];
 
 export const users = [

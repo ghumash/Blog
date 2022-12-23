@@ -43,10 +43,6 @@ export default function PostMenu() {
           Delete
           <Delete sx={{ marginLeft: "auto", pl: 5 }} />
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          Share
-          <Share sx={{ marginLeft: "auto", pl: 5 }} />
-        </MenuItem>
       </Menu>
     </div>
   );

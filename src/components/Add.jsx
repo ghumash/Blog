@@ -69,10 +69,18 @@ export default function Add() {
             <Image color="secondary" />
           </Stack>
           <Box display="flex" justifyContent="space-evenly">
-            <Button sx={{ width: "45%" }} color="error" variant="contained">
+            <Button
+              sx={{ width: "45%", color: "#fff" }}
+              color="error"
+              variant="contained"
+            >
               Cancel
             </Button>
-            <Button sx={{ width: "45%" }} color="success" variant="contained">
+            <Button
+              sx={{ width: "45%", color: "#fff" }}
+              color="success"
+              variant="contained"
+            >
               Post
             </Button>
           </Box>

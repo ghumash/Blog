@@ -27,7 +27,7 @@ export default function Post({ post, user }) {
     useToggle();
 
   return (
-    <Card>
+    <Card sx={{marginBottom: 5}}>
       <CardHeader
         avatar={<Avatar src={`./assets/avatars/${post.userImg}`} alt="" />}
         action={<PostMenu />}
@@ -82,7 +82,7 @@ export default function Post({ post, user }) {
           icon={<FavoriteBorder />}
           checkedIcon={<Favorite color="error" />}
         />
-        <IconButton onClick={commentStatusToggle} aria-label="share">
+        <IconButton onClick={commentStatusToggle} aria-label="comment">
           <Comment />
         </IconButton>
         {!!post.comments.length && (

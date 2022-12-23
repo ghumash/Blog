@@ -10,7 +10,7 @@ import Add from "../components/Add";
 import { posts as userPosts, users as authors } from "../js/const";
 
 export default function App() {
-  const [mode, setMode] = React.useState("light");
+  const [mode, setMode] = React.useState("dark");
   const [posts, setPosts] = React.useState(userPosts);
   const [users, setUsers] = React.useState(authors);
 
