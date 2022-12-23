@@ -41,8 +41,9 @@ export default function Post({ post, user }) {
       />
       <CardMedia
         component="img"
-        image={`./assets/covers/${post.cover}`}
-        alt={post.title}
+        image={`https://ghumash.github.io/Blog/assets/covers/cover_1.jpg`}
+        alt=""
+        sx={{marginBottom: 2}}
       />
 
       <CardContent>
