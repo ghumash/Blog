@@ -27,7 +27,11 @@ export default function Post({ post, user }) {
     useToggle();
 
   return (
-    <Card sx={{ m: 5 }}>
+    <Card
+      sx={{
+        margin: { xs: 0, sm: 5 },
+      }}
+    >
       <CardHeader
         avatar={<Avatar src={`./assets/avatars/${post.userImg}`} />}
         action={<PostMenu />}
@@ -47,11 +51,19 @@ export default function Post({ post, user }) {
 
       <CardContent>
         {allPostVisible ? (
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            onClick={setAllPostVisible}
+            variant="body2"
+            color="text.secondary"
+          >
             {post.text}
           </Typography>
         ) : (
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            onClick={setAllPostVisible}
+            variant="body2"
+            color="text.secondary"
+          >
             {truncate(post.text, POST_DEFAULT_LENGTH)}
           </Typography>
         )}
@@ -66,15 +78,15 @@ export default function Post({ post, user }) {
           icon={<FavoriteBorder />}
           checkedIcon={<Favorite color="error" />}
         />
-        <IconButton aria-label="share">
-          <Share />
-        </IconButton>
         <IconButton onClick={commentStatusToggle} aria-label="share">
           <Comment />
         </IconButton>
         {!!post.comments.length && (
           <Typography>{post.comments.length}</Typography>
         )}
+        <IconButton aria-label="share">
+          <Share />
+        </IconButton>
       </CardActions>
       {commentStatus && (
         <>

@@ -10,7 +10,14 @@ export default function Feed({ posts }) {
   };
 
   return (
-    <Box flex={4} p={2} m={"0 !important"}>
+    <Box
+      sx={{
+        m: { xs: "0 !important", sm: 5 },
+        mt: { xs: "2em !important" },
+        p: { xs: "0", sm: 2 },
+        flex: 4,
+      }}
+    >
       {posts.map((post) => (
         <Post key={post.id} post={post} user={findUser(post.userId)} />
       ))}

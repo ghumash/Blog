@@ -33,7 +33,7 @@ export default function Navbar({ mode, setMode }) {
         <IconButton
           color="inherit"
           onClick={setBurgerStatus}
-          sx={{ display: { xs: "block", md: "none" } }}
+          sx={{ display: { xs: "flex", md: "none" } }}
         >
           <Menu />
         </IconButton>

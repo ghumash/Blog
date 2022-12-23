@@ -16,7 +16,7 @@ import {
 
 import { useToggle } from "../hooks/useToggle";
 import { modalStyles } from "../custom/mui.styles";
-import { UserBox } from "../custom/mui.components";
+import { PrimaryButton, UserBox } from "../custom/mui.components";
 
 export default function Add() {
   const { status: modal, toggleStatus: setModal } = useToggle();
@@ -69,10 +69,14 @@ export default function Add() {
             <EmojiEmotions color="warning" />
             <Image color="secondary" />
           </Stack>
-          <ButtonGroup variant="contained" fullWidth>
-            <Button color="error">Cancel</Button>
-            <Button color="success">Post</Button>
-          </ButtonGroup>
+          <Box display="flex" justifyContent="space-evenly">
+            <PrimaryButton color="error" variant="contained">
+              Cancel
+            </PrimaryButton>
+            <PrimaryButton color="success" variant="contained">
+              Post
+            </PrimaryButton>
+          </Box>
         </Box>
       </Modal>
     </>

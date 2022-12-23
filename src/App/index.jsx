@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor="background.default" color="text.primary">
+      <Box bgcolor="background.default" color="text.primary" height="100vh">
         <Navbar mode={mode} setMode={setMode} />
         <Stack direction="row" spacing={2} justifyContent="space-evenly">
           <Box sx={{ display: { xs: "none", md: "block" } }}>

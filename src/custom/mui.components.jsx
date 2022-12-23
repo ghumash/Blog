@@ -1,4 +1,4 @@
-import { Box, styled, Toolbar } from "@mui/material";
+import { Box, Button, styled, Toolbar } from "@mui/material";
 
 export const UserBox = styled(Box)({
   display: "flex",
@@ -35,4 +35,8 @@ export const UserBoxMobile = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("sm")]: {
     display: "none",
   },
+}));
+
+export const PrimaryButton = styled(Button)(({ theme }) => ({
+  sx: { p: ".5em 3em" },
 }));
