@@ -29,9 +29,9 @@ export default function Post({ post, user }) {
   return (
     <Card>
       <CardHeader
-        avatar={<Avatar src={`./assets/avatars/${post.userImg}`} />}
+        avatar={<Avatar src={`./assets/avatars/${post.userImg}`} alt="" />}
         action={<PostMenu />}
-        title={post.title}
+        title={"Joe Doe"}
         subheader={
           <>
             {post.createdAt}
@@ -41,25 +41,32 @@ export default function Post({ post, user }) {
       />
       <CardMedia
         component="img"
-        image={`https://ghumash.github.io/Blog/assets/covers/cover_1.jpg`}
+        image={`./assets/covers/${post.cover}`}
         alt=""
-        sx={{marginBottom: 2}}
       />
 
       <CardContent>
+        <Typography
+          variant="h6"
+          onClick={setAllPostVisible}
+          color="text.default"
+          marginBottom={1}
+        >
+          {post.title}
+        </Typography>
         {allPostVisible ? (
           <Typography
             onClick={setAllPostVisible}
-            variant="body2"
             color="text.secondary"
+            fontSize="14px"
           >
             {post.text}
           </Typography>
         ) : (
           <Typography
             onClick={setAllPostVisible}
-            variant="body2"
             color="text.secondary"
+            fontSize="14px"
           >
             {truncate(post.text, POST_DEFAULT_LENGTH)}
           </Typography>

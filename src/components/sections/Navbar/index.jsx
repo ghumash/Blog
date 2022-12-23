@@ -25,7 +25,7 @@ export default function Navbar({ mode, setMode }) {
   const { status: burgerStatus, toggleStatus: setBurgerStatus } = useToggle();
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" color="primary">
       <StyledToolbar>
         <Typography variant="h5" sx={{ display: { xs: "none", md: "block" } }}>
           Blog

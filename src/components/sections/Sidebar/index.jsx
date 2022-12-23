@@ -31,7 +31,7 @@ export default function Sidebar({ mode, setMode }) {
           >
             <SidebarItem
               name={<Switch checked={mode === "light" ? false : true} />}
-              icon={mode === "light" ? <WbSunny /> : <ModeNight />}
+              icon={<ModeNight color={mode === "light" ? "" : "primary"} />}
             />
           </ListItem>
         </List>
