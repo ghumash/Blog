@@ -13,7 +13,12 @@ import CommentsItem from "../../shared/CommentsItem";
 
 export default function Rightbar() {
   return (
-    <Box flex={2} sx={{ display: { xs: "none", md: "block" } }}>
+    <Box
+      flex={2}
+      sx={{
+        display: { xs: "none", md: "block" },
+      }}
+    >
       <Box p={2}>
         <Typography variant="h6" fontWeight={100} mt={1} mb={1}>
           Online Friends

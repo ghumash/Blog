@@ -27,11 +27,7 @@ export default function Post({ post, user }) {
     useToggle();
 
   return (
-    <Card
-      sx={{
-        margin: { xs: 0, sm: 5 },
-      }}
-    >
+    <Card>
       <CardHeader
         avatar={<Avatar src={`./assets/avatars/${post.userImg}`} />}
         action={<PostMenu />}

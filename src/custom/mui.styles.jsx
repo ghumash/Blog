@@ -3,7 +3,7 @@ export const modalStyles = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "50%",
+  width: { xs: "70%", sm: "40%", md: "30%" },
   color: "text.primary",
   bgcolor: "background.default",
   borderRadius: 5,

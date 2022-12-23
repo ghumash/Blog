@@ -36,7 +36,3 @@ export const UserBoxMobile = styled(Box)(({ theme }) => ({
     display: "none",
   },
 }));
-
-export const PrimaryButton = styled(Button)(({ theme }) => ({
-  sx: { p: ".5em 3em" },
-}));

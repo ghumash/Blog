@@ -12,8 +12,7 @@ export default function Feed({ posts }) {
   return (
     <Box
       sx={{
-        m: { xs: "0 !important", sm: 5 },
-        mt: { xs: "2em !important" },
+        margin: { xs: "1.2em !important", sm: 5 },
         p: { xs: "0", sm: 2 },
         flex: 4,
       }}
