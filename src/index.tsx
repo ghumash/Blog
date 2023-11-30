@@ -1,7 +1,12 @@
 import {render} from 'react-dom'
-import Comp from "./components/comp";
+import App from "./App";
+import "./index.scss";
+import {BrowserRouter} from "react-router-dom";
+const root = document.getElementById('root')
 
 render (
-  <Comp/>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>,
+  root
 )

@@ -1,8 +1,8 @@
-import "./styles.scss"
+import classes from "./Comp.module.scss"
 
 function Comp() {
   return (
-    <div className={'armen'}>
+    <div className={classes.root}>
       <p>Comp</p>
     </div>
   )
