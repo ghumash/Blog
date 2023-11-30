@@ -1,14 +1,21 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "\"# Blog\"",
+  "main": "webpack.config.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghumash/Blog.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghumash/Blog/issues"
+  },
+  "homepage": "https://github.com/ghumash/Blog#readme",
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/webpack": "5.28.0",
