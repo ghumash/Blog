@@ -1,8 +1,8 @@
-import classes from "./MainPage.module.scss"
+import cls from "./MainPage.module.scss"
 
 const MainPage = () => {
   return (
-    <div className={classes.root}>
+    <div className={cls.root}>
       <div>MainPage</div>
     </div>
   )

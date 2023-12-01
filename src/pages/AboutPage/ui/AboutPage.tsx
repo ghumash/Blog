@@ -1,8 +1,8 @@
-import classes from "./AboutPage.module.scss"
+import cls from "./AboutPage.module.scss"
 
 const AboutPage = () => {
   return (
-    <div className={classes.root}>
+    <div className={cls.root}>
       <div>AboutPage</div>
     </div>
   )
