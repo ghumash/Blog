@@ -19,7 +19,7 @@ export const Button: FC<ButtonProps> = (props) => {
     theme,
     ...otherProps
   } = props
-  console.log(props)
+
   return (
     <button
       onClick={onClick}
