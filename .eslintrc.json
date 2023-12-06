@@ -45,7 +45,8 @@
     "max-len": ["error", {
       "ignoreComments": true,
       "code": 100
-    }]
+    }],
+    "semi": ["error", "never"]
   },
   "globals": {
     "__IS_DEV__": true
