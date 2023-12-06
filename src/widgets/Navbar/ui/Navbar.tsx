@@ -16,11 +16,12 @@ export const Navbar = ({ className }: NavbarProps) => {
         <AppLink
           className={cls.mainLink}
           to="/"
-          theme={AppLinkTheme.PRIMARY}
+          theme={AppLinkTheme.INVERTED}
         >
           {t('Home')}
         </AppLink>
-        <AppLink to="/about" theme={AppLinkTheme.INVERTED}>
+        {/* eslint-disable-next-line i18next/no-literal-string */}
+        <AppLink to="about" theme={AppLinkTheme.INVERTED}>
           {t('About us')}
         </AppLink>
       </div>
