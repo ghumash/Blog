@@ -7,7 +7,8 @@ https://ghumash.github.io/Blog/
 ##### React.js
 ##### Webpack
 ##### Architecture 'Feature-Sliced-Design'
-##### Jest
 ##### SCSS
 ##### i18n
+##### Jest
 ##### Storybook
+##### Screenshot tests 'Loki'
