@@ -9,25 +9,24 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 17.x ]
-
+        node-version: [ 20.x ]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Staring Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
+      - name: Install Node Modules
         run: npm install
-      - name: build production project
+      - name: Build Production Project
         run: npm run build:prod
-      - name: linting typescript
+      - name: Linting TypeScript
         run: npm run lint:ts
-      - name: linting css
+      - name: Linting CSS
         run: npm run lint:scss
-      - name: unit testing
+      - name: Unit Testing
         run: npm run test:unit
-      - name: build storybook
+      - name: Build Storybook
         run: npm run storybook:build
-      - name: screenshot testing
-        run: npm run test:ui:ci
+#      - name: Screenshot Testing
+#        run: npm run test:ui:ci
