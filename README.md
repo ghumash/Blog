@@ -12,3 +12,4 @@ https://ghumash.github.io/Blog/
 ##### Jest
 ##### Storybook
 ##### Screenshot tests 'Loki'
+##### CI / CD
