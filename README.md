@@ -11,5 +11,5 @@ https://ghumash.github.io/Blog/
 ##### i18n
 ##### Jest
 ##### Storybook
-##### Screenshot tests 'Loki'
+##### Screenshot tests with 'Loki'
 ##### CI / CD

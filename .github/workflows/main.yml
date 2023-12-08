@@ -1,4 +1,4 @@
-name: linting, testing, building
+name: Linting, Testing, Building
 on:
   push:
     branches: [ main ]
@@ -28,5 +28,5 @@ jobs:
         run: npm run test:unit
       - name: Build Storybook
         run: npm run storybook:build
-#      - name: Screenshot Testing
-#        run: npm run test:ui:ci
+      - name: Screenshot Testing
+        run: npm run test:ui:ci
