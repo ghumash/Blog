@@ -3,9 +3,9 @@
 https://ghumash.github.io/Blog/
 
 # 🛠 TECHNOLOGIES
+##### Webpack
 ##### TypeScript
 ##### React.js
-##### Webpack
 ##### Architecture 'Feature-Sliced-Design'
 ##### SCSS
 ##### i18n
