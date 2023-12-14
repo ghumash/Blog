@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { routeConfig } from 'shared/config/routeConfig/routeConfig'
-import { PageLoader } from 'shared/ui/PageLoader/PageLoader'
+import { PageLoader } from 'widgets/PageLoader/ui/PageLoader'
+import { RouteConfig } from 'shared/config/RouteConfig'
 
 const AppRouter = () => (
   <Routes>
-    {Object.values(routeConfig).map(({ element, path }) => (
+    {Object.values(RouteConfig).map(({ element, path }) => (
       <Route
         key={path}
         path={path}
