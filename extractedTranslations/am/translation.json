@@ -5,5 +5,7 @@
   "Page not found": "Page not found",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
-  "Update page": "Update page"
+  "Update page": "Update page",
+  "decrement": "decrement",
+  "increment": "increment"
 }
