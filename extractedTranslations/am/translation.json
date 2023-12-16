@@ -3,9 +3,11 @@
   "Home": "Home",
   "Login": "Login",
   "Page not found": "Page not found",
+  "Password": "Password",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
   "Update page": "Update page",
+  "Username": "Username",
   "decrement": "decrement",
   "increment": "increment"
 }
