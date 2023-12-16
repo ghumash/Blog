@@ -16,5 +16,7 @@
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Страница не найдена": "Страница не найдена",
   "Язык": "Язык",
-  "Password": "Password"
+  "Password": "Password",
+  "The username or password is incorrect!": "The username or password is incorrect!",
+  "Logout": "Logout"
 }

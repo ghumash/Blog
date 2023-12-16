@@ -12,5 +12,7 @@
   "Login": "Login",
   "Register": "Register",
   "Password": "Password",
-  "Username": "Username"
+  "Username": "Username",
+  "The username or password is incorrect!": "The username or password is incorrect!",
+  "Logout": "Logout"
 }

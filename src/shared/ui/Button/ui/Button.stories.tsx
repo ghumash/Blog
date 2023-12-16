@@ -17,57 +17,57 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  children: 'Text',
+  children: 'Button',
 }
 
 export const Clear = Template.bind({})
 Clear.args = {
-  children: 'Text',
+  children: 'Button',
   theme: ButtonTheme.CLEAR,
 }
 
 export const ClearInverted = Template.bind({})
 ClearInverted.args = {
-  children: 'Text',
+  children: 'Button',
   theme: ButtonTheme.CLEAR_INVERTED,
 }
 
 export const Outline = Template.bind({})
 Outline.args = {
-  children: 'Text',
+  children: 'Button',
   theme: ButtonTheme.OUTLINE,
 }
 
 export const OutlineSizeL = Template.bind({})
 OutlineSizeL.args = {
-  children: 'Text',
+  children: 'Button',
   theme: ButtonTheme.OUTLINE,
   size: ButtonSize.L,
 }
 
 export const OutlineSizeXl = Template.bind({})
 OutlineSizeXl.args = {
-  children: 'Text',
+  children: 'Button',
   theme: ButtonTheme.OUTLINE,
   size: ButtonSize.XL,
 }
 
 export const OutlineDark = Template.bind({})
 OutlineDark.args = {
-  children: 'Text',
+  children: 'Button',
   theme: ButtonTheme.OUTLINE,
 }
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const BackgroundTheme = Template.bind({})
 BackgroundTheme.args = {
-  children: 'Text',
+  children: 'Button',
   theme: ButtonTheme.BACKGROUND,
 }
 
 export const BackgroundInverted = Template.bind({})
 BackgroundInverted.args = {
-  children: 'Text',
+  children: 'Button',
   theme: ButtonTheme.BACKGROUND_INVERTED,
 }
 
@@ -92,4 +92,11 @@ SquareSizeXl.args = {
   theme: ButtonTheme.BACKGROUND_INVERTED,
   square: true,
   size: ButtonSize.XL,
+}
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+  children: 'Button',
+  theme: ButtonTheme.OUTLINE,
+  disabled: true,
 }

@@ -12,5 +12,7 @@
   "Login": "Մուտք",
   "Register": "Գրանցվել",
   "Password": "Գաղտնաբառ",
-  "Username": "Օգտատեր"
+  "Username": "Օգտատեր",
+  "The username or password is incorrect!": "Օգտատիրոջ անունը կամ գաղտնաբառը սխալ է:",
+  "Logout": "Ելք"
 }
