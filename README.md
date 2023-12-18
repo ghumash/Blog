@@ -12,7 +12,9 @@ https://ghumash.github.io/Blog/
 
 ##### Architecture 'Feature-Sliced-Design'
 
-##### SCSS
+##### SCSS / Modules
+
+##### Custom ClassNames lib
 
 ##### i18n
 
@@ -27,3 +29,6 @@ https://ghumash.github.io/Blog/
 ##### Github actions
 
 ##### Husky (pre commit)
+
+##### Custom Async Reducers lib
+

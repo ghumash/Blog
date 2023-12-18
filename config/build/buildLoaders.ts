@@ -1,50 +1,22 @@
 import webpack from 'webpack'
-import { buildCssLoader } from './loaders/buildCssLoader'
 import { BuildOptions } from './types/config'
+import { buildCssLoader } from './loaders/buildCssLoader'
+import { buildSvgLoader } from './loaders/buildSvgLoader'
+import { buildTypescriptLoader } from './loaders/buildTypescriptLoader'
+import { buildFileLoader } from './loaders/buildFileLoader'
+import { buildBabelLoader } from './loaders/buildBabelLoader'
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
-  const svgLoader = {
-    test: /\.svg$/,
-    use: ['@svgr/webpack'],
-  }
+  const svgLoader = buildSvgLoader()
 
-  const babelLoader = {
-    test: /\.(js|jsx|tsx)$/,
-    exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env'],
-        plugins: [
-          [
-            'i18next-extract',
-            {
-              locales: ['en', 'am'],
-              keyAsDefaultValue: true,
-            },
-          ],
-        ],
-      },
-    },
-  }
+  const babelLoader = buildBabelLoader()
 
   const cssLoader = buildCssLoader(isDev)
 
-  // Если не используем тайпскрипт - нужен babel-loader
-  const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: 'ts-loader',
-    exclude: /node_modules/,
-  }
+  // If we don’t use typescript, we need babel-loader
+  const typescriptLoader = buildTypescriptLoader()
 
-  const fileLoader = {
-    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-    use: [
-      {
-        loader: 'file-loader',
-      },
-    ],
-  }
+  const fileLoader = buildFileLoader()
 
   return [
     fileLoader,
