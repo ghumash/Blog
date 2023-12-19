@@ -2,10 +2,11 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { Input } from 'shared/ui/Input'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { memo, useCallback } from 'react'
 import { Text, TextTheme } from 'shared/ui/Text'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch'
 import { getLoadingState } from '../../model/selectors/getLoadingState/getLoadingState'
 import { getErrorState } from '../../model/selectors/getErrorState/getErrorState'
 import { getUsernameState } from '../../model/selectors/getUsernameState/getUsernameState'
@@ -16,6 +17,7 @@ import cls from './LoginForm.module.scss'
 
 export interface LoginFormProps {
   className?: string;
+  onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
@@ -23,9 +25,12 @@ const initialReducers: ReducersList = {
 }
 
 const LoginForm = memo((props: LoginFormProps) => {
-  const { className } = props
+  const {
+    className,
+    onSuccess,
+  } = props
   const { t } = useTranslation()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const username = useSelector(getUsernameState)
   const password = useSelector(getPasswordState)
   const error = useSelector(getErrorState)
@@ -39,12 +44,15 @@ const LoginForm = memo((props: LoginFormProps) => {
     dispatch(loginActions.setPassword(value))
   }, [dispatch])
 
-  const onLogin = useCallback(() => {
-    dispatch(loginByUsername({
+  const onLogin = useCallback(async () => {
+    const result = await dispatch(loginByUsername({
       username,
       password,
     }))
-  }, [dispatch, username, password])
+    if (result.meta.requestStatus === 'fulfilled') {
+      onSuccess()
+    }
+  }, [onSuccess, dispatch, username, password])
 
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>

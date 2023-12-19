@@ -1,8 +1,8 @@
 import { Button } from 'shared/ui/Button'
-import React, { useEffect, useState, CSSProperties } from 'react'
+import React, { CSSProperties, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-// Компонент для тестирования ErrorBoundary
+// Component for testing ErrorBoundary
 
 interface BugButtonProps {
   style?: CSSProperties;
