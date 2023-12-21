@@ -43,7 +43,10 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
           />
         ))}
       </div>
-      <BugButton style={{ margin: '100px 0 0 30px' }} />
+      <BugButton
+        collapsed={collapsed}
+        className={cls.bugButton}
+      />
       <div className={cls.switchers}>
         <ThemeSwitcher />
         <LangSwitcher

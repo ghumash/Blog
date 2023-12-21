@@ -15,5 +15,8 @@
   "Username": "Username",
   "The username or password is incorrect!": "The username or password is incorrect!",
   "Logout": "Logout",
-  "Profile": "Profile"
+  "Profile": "Profile",
+  "Currency": "Currency",
+  "Country": "Country",
+  "Try to update the page": "Try to update the page"
 }

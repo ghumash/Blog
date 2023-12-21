@@ -1,14 +1,19 @@
-import { Button } from 'shared/ui/Button'
-import React, { CSSProperties, useEffect, useState } from 'react'
+import { Button, ButtonTheme } from 'shared/ui/Button'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import ErrorIcon from 'shared/assets/icons/error.svg'
 
 // Component for testing ErrorBoundary
 
 interface BugButtonProps {
-  style?: CSSProperties;
+  className?: string;
+  collapsed?: boolean;
 }
 
-export const BugButton = ({ style }: BugButtonProps) => {
+export const BugButton = ({
+  collapsed,
+  className,
+}: BugButtonProps) => {
   const [error, setError] = useState(false)
   const { t } = useTranslation()
 
@@ -22,10 +27,11 @@ export const BugButton = ({ style }: BugButtonProps) => {
 
   return (
     <Button
+      theme={ButtonTheme.CLEAR_INVERTED}
+      className={className}
       onClick={onThrow}
-      style={style}
     >
-      {t('Throw error')}
+      {collapsed ? <ErrorIcon /> : t('Throw error')}
     </Button>
   )
 }

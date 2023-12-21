@@ -16,9 +16,9 @@ export const fetchProfileData = createAsyncThunk<
 
     try {
       const response = await extra.api.get<Profile>('/profile')
-
       return response.data
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.log(e)
       return rejectWithValue('error')
     }

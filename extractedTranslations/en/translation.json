@@ -1,6 +1,12 @@
 {
   "": "",
   "About us": "About us",
+  "Age": "Age",
+  "Avatar URL": "Avatar URL",
+  "Cancel": "Cancel",
+  "City": "City",
+  "Country": "Country",
+  "Currency": "Currency",
   "Edit": "Edit",
   "First name": "First name",
   "Home": "Home",
@@ -10,10 +16,13 @@
   "PROFILE PAGE": "",
   "Page not found": "Page not found",
   "Password": "",
+  "Please refresh the page": "Please refresh the page",
   "Profile": "Profile",
+  "Save": "Save",
   "Something went wrong": "Something went wrong",
   "The username or password is incorrect!": "The username or password is incorrect!",
   "Throw error": "Throw error",
+  "Try to update the page": "Try to update the page",
   "Update page": "Update page",
   "Username": "",
   "decrement": "decrement",
@@ -27,5 +36,6 @@
   "Переключить": "Переключить",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Страница не найдена": "Страница не найдена",
+  "Укажите валюту": "",
   "Язык": "Язык"
 }

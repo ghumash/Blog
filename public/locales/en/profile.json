@@ -1,6 +1,12 @@
 {
   "Profile": "Profile",
-  "Edit": "Edit",
+  "Cancel": "Cancel",
   "First name": "First name",
-  "Last name": "Last name"
+  "Last name": "Last name",
+  "Age": "Age",
+  "City": "City",
+  "Avatar URL": "Avatar URL",
+  "Username": "Username",
+  "Edit": "Edit",
+  "Save": "Save"
 }
