@@ -17,7 +17,9 @@ const data = {
 describe('updateProfileData.test', () => {
   test('success', async () => {
     const thunk = new TestAsyncThunk(updateProfileData, {
-      profile: { form: data },
+      profile: {
+        form: data,
+      },
     })
 
     thunk.api.put.mockReturnValue(Promise.resolve({ data }))
@@ -34,7 +36,9 @@ describe('updateProfileData.test', () => {
 
   test('error', async () => {
     const thunk = new TestAsyncThunk(updateProfileData, {
-      profile: { form: data },
+      profile: {
+        form: data,
+      },
     })
     thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }))
 
@@ -50,7 +54,9 @@ describe('updateProfileData.test', () => {
 
   test('validate error', async () => {
     const thunk = new TestAsyncThunk(updateProfileData, {
-      profile: { form: { ...data, lastname: '' } },
+      profile: {
+        form: { ...data, lastname: '' },
+      },
     })
     const result = await thunk.callThunk()
 
