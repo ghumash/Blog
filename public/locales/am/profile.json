@@ -8,5 +8,10 @@
   "Avatar URL": "Անձնանշանի հղում",
   "Username": "Օգտատեր",
   "Edit": "Փոփոխել",
-  "Save": "Պահպանել"
+  "Save": "Պահպանել",
+  "No data": "Տվյալները բացակայում են",
+  "First name and Last name is required": "Անուն և ազգանուն դաշտերը պարտադիր են",
+  "Server error": "Սերվերային խնդիր",
+  "Incorrect country": "Սխալ երկիր",
+  "Incorrect age": "Սխալ տարիք"
 }

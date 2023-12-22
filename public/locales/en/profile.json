@@ -8,5 +8,10 @@
   "Avatar URL": "Avatar URL",
   "Username": "Username",
   "Edit": "Edit",
-  "Save": "Save"
+  "Save": "Save",
+  "No data": "No data",
+  "First name and Last name is required": "First name and Last name is required",
+  "Server error": "Server error",
+  "Incorrect country": "Incorrect country",
+  "Incorrect age": "Incorrect age"
 }
