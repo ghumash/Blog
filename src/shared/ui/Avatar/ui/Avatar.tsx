@@ -1,4 +1,4 @@
-import { index, Mods } from 'shared/lib/classNames'
+import { classNames, Mods } from 'shared/lib/classNames'
 import { CSSProperties, memo, useMemo } from 'react'
 import cls from './Avatar.module.scss'
 
@@ -27,7 +27,7 @@ export const Avatar = memo(({
       src={src}
       alt={alt ?? ''}
       style={styles}
-      className={index(cls.Avatar, mods, [className])}
+      className={classNames(cls.Avatar, mods, [className])}
     />
   )
 })

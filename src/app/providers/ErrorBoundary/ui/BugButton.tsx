@@ -1,5 +1,5 @@
 import { Button, ButtonTheme } from 'shared/ui/Button'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import ErrorIcon from 'shared/assets/icons/error.svg'
 

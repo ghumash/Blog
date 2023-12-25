@@ -1,4 +1,4 @@
-import { index, Mods } from 'shared/lib/classNames'
+import { classNames, Mods } from 'shared/lib/classNames'
 import { ChangeEvent, memo, useMemo } from 'react'
 import cls from './Select.module.scss'
 
@@ -45,7 +45,7 @@ export const Select = memo((props: SelectProps) => {
   const mods: Mods = {}
 
   return (
-    <div className={index(cls.Wrapper, mods, [className])}>
+    <div className={classNames(cls.Wrapper, mods, [className])}>
       {label && (
         <span className={cls.label}>
           {`${label}>`}

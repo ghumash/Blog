@@ -1,4 +1,4 @@
-import { index } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames'
 import { Link, LinkProps } from 'react-router-dom'
 import { memo, ReactNode } from 'react'
 import cls from './AppLink.module.scss'
@@ -27,7 +27,7 @@ export const AppLink = memo((props: AppLinkProps) => {
   return (
     <Link
       to={to}
-      className={index(cls.AppLink, {}, [className, cls[theme]])}
+      className={classNames(cls.AppLink, {}, [className, cls[theme]])}
       {...otherProps}
     >
       {children}

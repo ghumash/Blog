@@ -1,5 +1,5 @@
-import { index } from 'shared/lib/classNames'
-import React, { memo, useCallback, useState } from 'react'
+import { classNames } from 'shared/lib/classNames'
+import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { LoginModal } from 'features/AuthByUsername'
@@ -31,7 +31,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
   if (authData) {
     return (
-      <div className={index(cls.Navbar, {}, [className])}>
+      <div className={classNames(cls.Navbar, {}, [className])}>
         <Button
           theme={ButtonTheme.CLEAR_INVERTED}
           className={cls.links}
@@ -44,7 +44,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   }
 
   return (
-    <div className={index(cls.Navbar, {}, [className])}>
+    <div className={classNames(cls.Navbar, {}, [className])}>
       <Button
         theme={ButtonTheme.CLEAR_INVERTED}
         className={cls.links}

@@ -1,6 +1,6 @@
-import { index, Mods } from 'shared/lib/classNames'
-import React, {
-  InputHTMLAttributes, memo, useEffect, useRef, useState,
+import { classNames, Mods } from 'shared/lib/classNames'
+import {
+  ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react'
 import cls from './Input.module.scss'
 
@@ -37,7 +37,7 @@ export const Input = memo((props: InputProps) => {
     }
   }, [autofocus])
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value)
     setCaretPosition(e.target.value.length)
   }
@@ -59,7 +59,7 @@ export const Input = memo((props: InputProps) => {
   }
 
   return (
-    <div className={index(cls.InputWrapper, mods, [className])}>
+    <div className={classNames(cls.InputWrapper, mods, [className])}>
       {placeholder && (
         <div className={cls.placeholder}>
           {`${placeholder}>`}

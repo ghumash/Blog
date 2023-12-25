@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink'
 import { memo } from 'react'
-import { index } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames'
 import { useSelector } from 'react-redux'
 import { getUserAuthData } from 'entities/User'
 import cls from './SidebarItem.module.scss'
@@ -27,7 +27,7 @@ export const SidebarItem = memo(({
     <AppLink
       theme={AppLinkTheme.SECONDARY}
       to={item.path}
-      className={index(cls.item, { [cls.collapsed]: collapsed })}
+      className={classNames(cls.item, { [cls.collapsed]: collapsed })}
     >
       <item.Icon className={cls.icon} />
       {!collapsed && (

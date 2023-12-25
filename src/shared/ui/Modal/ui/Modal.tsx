@@ -1,12 +1,6 @@
-import { index, Mods } from 'shared/lib/classNames'
+import { classNames, Mods } from 'shared/lib/classNames'
 import {
-  MouseEvent,
-  MutableRefObject,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
+  MouseEvent, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react'
 import { Portal } from 'shared/ui/Portal'
 import cls from './Modal.module.scss'
@@ -79,7 +73,7 @@ export const Modal = (props: ModalProps) => {
 
   return (
     <Portal>
-      <div className={index(cls.Modal, mods, [className])}>
+      <div className={classNames(cls.Modal, mods, [className])}>
         <div className={cls.overlay} onClick={closeHandler}>
           <div
             className={cls.content}

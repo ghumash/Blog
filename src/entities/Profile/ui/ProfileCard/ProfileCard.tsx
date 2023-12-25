@@ -1,4 +1,4 @@
-import { index, Mods } from 'shared/lib/classNames'
+import { classNames, Mods } from 'shared/lib/classNames'
 import { useTranslation } from 'react-i18next'
 import { Text, TextTheme } from 'shared/ui/Text'
 import { Input } from 'shared/ui/Input'
@@ -46,7 +46,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   if (isLoading) {
     return (
-      <div className={index(cls.ProfileCard, {}, [className, cls.loading])}>
+      <div className={classNames(cls.ProfileCard, {}, [className, cls.loading])}>
         <Loader />
       </div>
     )
@@ -54,7 +54,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   if (error) {
     return (
-      <div className={index(cls.ProfileCard, {}, [className, cls.error])}>
+      <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
         <Text
           theme={TextTheme.ERROR}
           title={t('Something went wrong')}
@@ -70,7 +70,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
   }
 
   return (
-    <div className={index(cls.ProfileCard, mods, [className])}>
+    <div className={classNames(cls.ProfileCard, mods, [className])}>
       <div className={cls.data}>
         {data?.avatar && (
           <div className={cls.avatarWrapper}>

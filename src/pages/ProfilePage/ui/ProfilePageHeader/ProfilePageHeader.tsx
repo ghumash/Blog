@@ -1,4 +1,4 @@
-import { index } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames'
 import { Text } from 'shared/ui/Text'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { useTranslation } from 'react-i18next'
@@ -34,7 +34,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch])
 
   return (
-    <div className={index(cls.ProfilePageHeader, {}, [className])}>
+    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
       <Text title={t('Profile')} />
       {readonly ? (
         <Button

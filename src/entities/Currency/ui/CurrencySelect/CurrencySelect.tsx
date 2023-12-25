@@ -1,4 +1,4 @@
-import { index } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames'
 import { useTranslation } from 'react-i18next'
 import { Select } from 'shared/ui/Select'
 import { memo, useCallback } from 'react'
@@ -40,7 +40,7 @@ export const CurrencySelect = memo(({
 
   return (
     <Select
-      className={index('', {}, [className])}
+      className={classNames('', {}, [className])}
       label={t('Currency')}
       options={options}
       value={value}

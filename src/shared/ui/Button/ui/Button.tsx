@@ -1,4 +1,4 @@
-import { index, Mods } from 'shared/lib/classNames'
+import { classNames, Mods } from 'shared/lib/classNames'
 import { ButtonHTMLAttributes, memo, ReactNode } from 'react'
 import cls from './Button.module.scss'
 
@@ -45,7 +45,7 @@ export const Button = memo<ButtonProps>((props: ButtonProps) => {
   return (
     <button
       type="button"
-      className={index(cls.Button, mods, [className, cls[theme], cls[size]])}
+      className={classNames(cls.Button, mods, [className, cls[theme], cls[size]])}
       disabled={disabled}
       {...otherProps}
     >
