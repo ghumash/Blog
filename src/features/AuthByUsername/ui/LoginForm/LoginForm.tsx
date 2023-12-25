@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { index } from 'shared/lib/classNames'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { Input } from 'shared/ui/Input'
@@ -56,7 +56,7 @@ const LoginForm = memo((props: LoginFormProps) => {
 
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
-      <div className={classNames(cls.LoginForm, {}, [className])}>
+      <div className={index(cls.LoginForm, {}, [className])}>
         <Text title={t('Login')} />
         {error && (
           <Text

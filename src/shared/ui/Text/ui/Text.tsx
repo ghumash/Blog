@@ -1,4 +1,4 @@
-import { Additional, classNames } from 'shared/lib/classNames/classNames'
+import { Additional, index } from 'shared/lib/classNames'
 import { memo } from 'react'
 import cls from './Text.module.scss'
 
@@ -33,7 +33,7 @@ export const Text = memo((props: TextProps) => {
   const additional: Additional = [className, cls[theme], cls[align]]
 
   return (
-    <div className={classNames(cls.Text, {}, additional)}>
+    <div className={index(cls.Text, {}, additional)}>
       {title && <p className={cls.title}>{title}</p>}
       {text && <p className={cls.text}>{text}</p>}
     </div>

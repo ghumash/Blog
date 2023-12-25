@@ -1,4 +1,4 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames'
+import { index, Mods } from 'shared/lib/classNames'
 import React, {
   InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react'
@@ -59,7 +59,7 @@ export const Input = memo((props: InputProps) => {
   }
 
   return (
-    <div className={classNames(cls.InputWrapper, mods, [className])}>
+    <div className={index(cls.InputWrapper, mods, [className])}>
       {placeholder && (
         <div className={cls.placeholder}>
           {`${placeholder}>`}

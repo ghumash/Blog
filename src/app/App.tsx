@@ -1,5 +1,5 @@
 import { Suspense, useEffect } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { index } from 'shared/lib/classNames'
 import { AppRouter } from 'app/providers/router'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
@@ -14,7 +14,7 @@ function App() {
   }, [dispatch])
 
   return (
-    <div className={classNames('app', {}, [])}>
+    <div className={index('app', {}, [])}>
       <Suspense fallback="">
         <Navbar />
         <div className="content-page">

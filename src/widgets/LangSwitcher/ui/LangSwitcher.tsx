@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { index } from 'shared/lib/classNames'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { memo } from 'react'
@@ -23,7 +23,7 @@ export const LangSwitcher = memo(({
 
   return (
     <Button
-      className={classNames('', {}, [className])}
+      className={index('', {}, [className])}
       theme={ButtonTheme.CLEAR_INVERTED}
       onClick={toggle}
     >

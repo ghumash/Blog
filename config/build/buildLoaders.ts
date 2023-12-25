@@ -6,16 +6,13 @@ import { buildTypescriptLoader } from './loaders/buildTypescriptLoader'
 import { buildFileLoader } from './loaders/buildFileLoader'
 import { buildBabelLoader } from './loaders/buildBabelLoader'
 
-export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+  const { isDev } = options
+
   const svgLoader = buildSvgLoader()
-
-  const babelLoader = buildBabelLoader()
-
+  const babelLoader = buildBabelLoader(isDev)
   const cssLoader = buildCssLoader(isDev)
-
-  // If we don’t use typescript, we need babel-loader
   const typescriptLoader = buildTypescriptLoader()
-
   const fileLoader = buildFileLoader()
 
   return [

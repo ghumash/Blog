@@ -1,4 +1,4 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames'
+import { index, Mods } from 'shared/lib/classNames'
 import {
   MouseEvent,
   MutableRefObject,
@@ -79,7 +79,7 @@ export const Modal = (props: ModalProps) => {
 
   return (
     <Portal>
-      <div className={classNames(cls.Modal, mods, [className])}>
+      <div className={index(cls.Modal, mods, [className])}>
         <div className={cls.overlay} onClick={closeHandler}>
           <div
             className={cls.content}
