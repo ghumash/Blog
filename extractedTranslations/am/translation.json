@@ -2,6 +2,8 @@
   "": "",
   "About us": "About us",
   "Age": "Age",
+  "Article is not defined": "Article is not defined",
+  "Article not defined": "Article not defined",
   "Avatar": "Avatar",
   "Avatar URL": "Avatar URL",
   "Cancel": "Cancel",
@@ -27,10 +29,14 @@
   "Server error": "Server error",
   "Something went wrong": "Something went wrong",
   "The username or password is incorrect!": "The username or password is incorrect!",
+  "There was an error loading the article": "There was an error loading the article",
   "Throw error": "Throw error",
   "Try to update the page": "Try to update the page",
   "Update page": "Update page",
   "Username": "Username",
   "decrement": "decrement",
-  "increment": "increment"
+  "increment": "increment",
+  "Произошла ошибка при загрузке статьи": {
+    "": ""
+  }
 }

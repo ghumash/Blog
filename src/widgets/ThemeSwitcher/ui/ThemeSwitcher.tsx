@@ -4,6 +4,7 @@ import LightIcon from 'shared/assets/icons/theme-light.svg'
 import DarkIcon from 'shared/assets/icons/theme-dark.svg'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { memo } from 'react'
+import { Icon } from 'shared/ui/Icon'
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -21,7 +22,8 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
       className={classNames('', {}, [className])}
       onClick={toggleTheme}
     >
-      {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
+      {/* TODO: change icons to shared icon component */}
+      {theme === Theme.DARK ? <Icon Svg={DarkIcon} /> : <Icon Svg={LightIcon} />}
     </Button>
   )
 })

@@ -2,6 +2,8 @@
   "": "",
   "About us": "About us",
   "Age": "Age",
+  "Article is not defined": "",
+  "Article not defined": "",
   "Avatar URL": "Avatar URL",
   "Cancel": "Cancel",
   "City": "City",
@@ -26,6 +28,7 @@
   "Server error": "",
   "Something went wrong": "Something went wrong",
   "The username or password is incorrect!": "The username or password is incorrect!",
+  "There was an error loading the article": "There was an error loading the article",
   "Throw error": "Throw error",
   "Try to update the page": "Try to update the page",
   "Update page": "Update page",
@@ -40,6 +43,9 @@
   "Обновить страницу": "Обновить страницу",
   "Переключить": "Переключить",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Произошла ошибка при загрузке статьи": {
+    "": ""
+  },
   "Страница не найдена": "Страница не найдена",
   "Укажите валюту": "",
   "Язык": "Язык"

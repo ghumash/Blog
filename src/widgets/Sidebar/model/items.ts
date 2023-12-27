@@ -32,12 +32,6 @@ export const SidebarItemsList: SidebarItemType[] = [
   {
     path: RoutePath.articles,
     Icon: ArticleIcon,
-    text: 'Profile',
-    authOnly: true,
-  },
-  {
-    path: RoutePath.article_details,
-    Icon: ProfileIcon,
     text: 'Articles',
     authOnly: true,
   },

@@ -2,6 +2,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import ErrorIcon from 'shared/assets/icons/error.svg'
+import { Icon } from 'shared/ui/Icon'
 
 // Component for testing ErrorBoundary
 
@@ -31,7 +32,7 @@ export const BugButton = ({
       className={className}
       onClick={onThrow}
     >
-      {collapsed ? <ErrorIcon /> : t('Throw error')}
+      {collapsed ? <Icon Svg={ErrorIcon} /> : t('Throw error')}
     </Button>
   )
 }

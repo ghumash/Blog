@@ -1,7 +1,8 @@
+import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Text, TextSize, TextTheme } from 'shared/ui/Text'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
-import { Text, TextTheme } from './Text'
 
 export default {
   title: 'shared/Text',
@@ -54,3 +55,10 @@ onlyTextDark.args = {
   text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam nihil quidem saepe, sed soluta! Aspernatur assumenda ducimus eum fugiat laboriosam nihil obcaecati possimus quam, quibusdam repellat, sint soluta voluptates?',
 }
 onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const SizeL = Template.bind({})
+SizeL.args = {
+  title: 'Title lorem ipsun',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nam nihil quidem saepe, sed soluta! Aspernatur assumenda ducimus eum fugiat laboriosam nihil obcaecati possimus quam, quibusdam repellat, sint soluta voluptates',
+  size: TextSize.L,
+}
