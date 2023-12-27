@@ -95,13 +95,13 @@
       "id": "2",
       "text": "some comment 2",
       "articleId": "1",
-      "userId": "1"
+      "userId": "2"
     },
     {
       "id": "3",
       "text": "some comment 3",
       "articleId": "1",
-      "userId": "1"
+      "userId": "3"
     }
   ],
   "users": [
@@ -109,13 +109,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://cdn2.vectorstock.com/i/1000x1000/56/61/computer-hacker-in-hoodie-obscured-dark-face-vector-47175661.jpg"
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "user2",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "3",
+      "username": "user3",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://media.istockphoto.com/id/962366210/photo/anonymous-hacker-with-laptop-in-front-of-binary-code-cyber-security.jpg?s=612x612&w=0&k=20&c=-BJLwYAzjTsXh5Zj_Qn-5HQ-MRYA2fr_SdXv7oqqSZk="
     }
   ],
   "profile": {
