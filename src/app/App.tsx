@@ -3,12 +3,13 @@ import { classNames } from 'shared/lib/classNames'
 import { AppRouter } from 'app/providers/router'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { getUserMounted, userActions } from 'entities/User'
 import { useTheme } from 'app/providers/ThemeProvider'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch'
 
 function App() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const mounted = useSelector(getUserMounted)
   const { theme } = useTheme()
 

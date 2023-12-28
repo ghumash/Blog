@@ -28,18 +28,28 @@
   "Please refresh the page": "Please refresh the page",
   "Profile": "Profile",
   "Save": "Save",
+  "Send": "Send",
   "Server error": "Server error",
   "Something went wrong": "Something went wrong",
   "The username or password is incorrect!": "The username or password is incorrect!",
   "There was an error loading the article": "There was an error loading the article",
   "Throw error": "Throw error",
   "Try to update the page": "Try to update the page",
+  "Type comment": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Update page": "Update page",
   "Username": "Username",
   "decrement": "decrement",
   "increment": "increment",
+  "Введите текст комментария": "Введите текст комментария",
   "Комментарии": "Комментарии",
   "Комментарии отсутствуют": "Комментарии отсутствуют",
+  "Отправить": "Отправить",
   "Произошла ошибка при загрузке статьи": {
     "": ""
   },

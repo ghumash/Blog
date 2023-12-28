@@ -27,17 +27,26 @@
   "Please refresh the page": "Please refresh the page",
   "Profile": "Profile",
   "Save": "Save",
+  "Send": "",
   "Server error": "",
   "Something went wrong": "Something went wrong",
   "The username or password is incorrect!": "The username or password is incorrect!",
   "There was an error loading the article": "There was an error loading the article",
   "Throw error": "Throw error",
   "Try to update the page": "Try to update the page",
+  "Type comment": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Update page": "Update page",
   "Username": "",
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "throw error",
+  "Введите текст комментария": "",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "Комментарии": "Комментарии",
@@ -45,6 +54,7 @@
   "О сайте": "О сайте",
   "О сайте123123": "О сайте123123",
   "Обновить страницу": "Обновить страницу",
+  "Отправить": "",
   "Переключить": "Переключить",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Произошла ошибка при загрузке статьи": {
