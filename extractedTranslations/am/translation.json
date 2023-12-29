@@ -6,6 +6,7 @@
   "Article not defined": "Article not defined",
   "Avatar": "Avatar",
   "Avatar URL": "Avatar URL",
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "City": "City",
   "Comments": "Comments",
@@ -27,6 +28,13 @@
   "Password": "Password",
   "Please refresh the page": "Please refresh the page",
   "Profile": "Profile",
+  "Read all": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Save": "Save",
   "Send": "Send",
   "Server error": "Server error",
@@ -53,5 +61,12 @@
   "Произошла ошибка при загрузке статьи": {
     "": ""
   },
-  "Статья не найдена": "Статья не найдена"
+  "Статья не найдена": "Статья не найдена",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }
