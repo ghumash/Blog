@@ -12,6 +12,7 @@ import { AddCommentForm } from 'features/addCommentForm'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { RoutePath } from 'shared/config/routeConfig'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch'
+import { Page } from 'shared/ui/Page'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import cls from './ArticleDetailsPage.module.scss'
@@ -49,15 +50,15 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         {t('Article is not defined')}
-      </div>
+      </Page>
     )
   }
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
           {t('Back to list')}
         </Button>
@@ -68,7 +69,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           isLoading={commentsIsLoading}
           comments={comments}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }
