@@ -5,14 +5,13 @@ import { profileReducer } from 'entities/Profile'
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader'
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice'
 import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice'
-import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice'
 
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
   addCommentForm: addCommentFormReducer,
-  articleDetailsComments: articleDetailsCommentsReducer,
+  articleDetailsPage: articleDetailsReducer,
 }
 
 export const StoreDecorator = (
@@ -21,10 +20,7 @@ export const StoreDecorator = (
 ) => (StoryComponent: Story) => (
   <StoreProvider
     initialState={state}
-    asyncReducers={{
-      ...defaultAsyncReducers,
-      ...asyncReducers,
-    }}
+    asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}
   >
     <StoryComponent />
   </StoreProvider>
