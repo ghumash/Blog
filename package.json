@@ -7,7 +7,7 @@
     "start": "webpack serve --env port=3004",
     "start:dev:server": "node ./json-server/index.js",
     "start:dev": "concurrently \"npm start\" \"npm run start:dev:server\" \"npm run storybook\"",
-    "build:prod": "webpack  --env mode=production apiUrl=https://blog-g1iu7qzua-tigrans-projects-bee784a2.vercel.app",
+    "build:prod": "webpack  --env mode=production apiUrl=https://blog-flax-two-73.vercel.app",
     "build:dev": "webpack  --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
