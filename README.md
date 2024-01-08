@@ -30,5 +30,7 @@ https://ghumash.github.io/Blog/
 
 ##### Husky (pre commit)
 
-##### Custom Async Reducers lib 
+##### Custom Async Reducers lib
+
+##### DOM list virtualization 
 

@@ -16,7 +16,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'react', '@typescript-eslint', 'i18next', 'react-hooks',
+    'react', '@typescript-eslint', 'i18next', 'react-hooks', 'fsd-path-checker-by-ghumash',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -58,6 +58,7 @@ module.exports = {
     'no-console': 'off',
     'react/no-array-index-key': 'off',
     'arrow-body-style': 'off',
+    'fsd-path-checker-by-ghumash/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

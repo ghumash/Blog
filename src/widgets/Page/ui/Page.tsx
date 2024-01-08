@@ -4,12 +4,11 @@ import {
 } from 'react'
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch'
+import { getScrollRestorationByPath, scrollRestorationActions } from 'features/scrollRestoration'
 import { useLocation } from 'react-router-dom'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect'
 import { useSelector } from 'react-redux'
 import { StateSchema } from 'app/providers/StoreProvider'
-import { scrollRestorationActions } from 'features/scrollRestoration/model/slices/scrollRestorationSlice'
-import { getScrollRestorationByPath } from 'features/scrollRestoration'
 import { useThrottle } from 'shared/lib/hooks/useThrottle'
 import cls from './Page.module.scss'
 
@@ -18,6 +17,8 @@ interface PageProps {
   children: ReactNode;
   onScrollEnd?: () => void;
 }
+
+export const PAGE_ID = 'PAGE_ID'
 
 export const Page = memo((props: PageProps) => {
   const {
@@ -29,7 +30,9 @@ export const Page = memo((props: PageProps) => {
   const triggerRef = useRef() as MutableRefObject<HTMLDivElement>
   const dispatch = useAppDispatch()
   const { pathname } = useLocation()
-  const scrollPosition = useSelector((state: StateSchema) => getScrollRestorationByPath(state, pathname))
+  const scrollPosition = useSelector(
+    (state: StateSchema) => getScrollRestorationByPath(state, pathname),
+  )
 
   useInfiniteScroll({
     triggerRef,
@@ -53,9 +56,10 @@ export const Page = memo((props: PageProps) => {
       ref={wrapperRef}
       className={classNames(cls.Page, {}, [className])}
       onScroll={onScroll}
+      id={PAGE_ID}
     >
       {children}
-      {onScrollEnd && <div className={cls.trigger} ref={triggerRef} />}
+      {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
     </section>
   )
 })

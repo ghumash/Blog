@@ -1,12 +1,8 @@
-import {
-  profileActions,
-  profileReducer,
-  ProfileSchema,
-  updateProfileData,
-  ValidateProfileError,
-} from 'entities/Profile'
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
+import { updateProfileData } from '../services/updateProfileData/updateProfileData'
+import { ProfileSchema, ValidateProfileError } from '../types/profile'
+import { profileActions, profileReducer } from '../slice/profileSlice'
 
 const data = {
   username: 'admin',
@@ -29,7 +25,10 @@ describe('profileSlice.test', () => {
   })
 
   test('test cancel edit', () => {
-    const state: DeepPartial<ProfileSchema> = { data, form: { username: '' } }
+    const state: DeepPartial<ProfileSchema> = {
+      data,
+      form: { username: '' },
+    }
 
     expect(profileReducer(
       state as ProfileSchema,

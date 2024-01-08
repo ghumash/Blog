@@ -1,6 +1,6 @@
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
-import { ValidateProfileError } from 'entities/Profile'
+import { ValidateProfileError } from '../../types/profile'
 import { validateProfileData } from './validateProfileData'
 
 const data = {
@@ -22,7 +22,11 @@ describe('validateProfileData.test', () => {
   })
 
   test('without first and last name', async () => {
-    const result = validateProfileData({ ...data, first: '', lastname: '' })
+    const result = validateProfileData({
+      ...data,
+      first: '',
+      lastname: '',
+    })
 
     expect(result)
       .toEqual([
@@ -31,7 +35,10 @@ describe('validateProfileData.test', () => {
   })
 
   test('incorrect age', async () => {
-    const result = validateProfileData({ ...data, age: undefined })
+    const result = validateProfileData({
+      ...data,
+      age: undefined,
+    })
 
     expect(result)
       .toEqual([
@@ -40,7 +47,10 @@ describe('validateProfileData.test', () => {
   })
 
   test('incorrect country', async () => {
-    const result = validateProfileData({ ...data, country: undefined })
+    const result = validateProfileData({
+      ...data,
+      country: undefined,
+    })
 
     expect(result)
       .toEqual([

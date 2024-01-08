@@ -32,7 +32,7 @@ interface ProfilePageProps {
   className?: string;
 }
 
-const ProfilePage = ({ className }: ProfilePageProps) => {
+export const ProfilePage = ({ className }: ProfilePageProps) => {
   const { t } = useTranslation('profile')
   const { id } = useParams<{ id: string }>()
 
