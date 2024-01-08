@@ -9,7 +9,7 @@ import {
 import { useCallback } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch'
 import { getUserAuthData } from 'entities/User'
-import cls from './ProfilePageHeader.module.scss'
+import { HStack } from 'shared/ui/Stack'
 
 interface ProfilePageHeaderProps {
   className?: string;
@@ -37,38 +37,33 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch])
 
   return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+    <HStack justify="between" max className={classNames('', {}, [className])}>
       <Text title={t('Profile')} />
       {canEdit && (
-        <div className={cls.btnWrapper}>
-          {readonly ? (
+        readonly ? (
+          <Button
+            theme={ButtonTheme.OUTLINE}
+            onClick={onEdit}
+          >
+            {t('Edit')}
+          </Button>
+        ) : (
+          <HStack gap="8">
             <Button
-              className={cls.editBtn}
-              theme={ButtonTheme.OUTLINE}
-              onClick={onEdit}
+              theme={ButtonTheme.OUTLINE_RED}
+              onClick={onCancel}
             >
-              {t('Edit')}
+              {t('Cancel')}
             </Button>
-          ) : (
-            <>
-              <Button
-                className={cls.cancelBtn}
-                theme={ButtonTheme.OUTLINE_RED}
-                onClick={onCancel}
-              >
-                {t('Cancel')}
-              </Button>
-              <Button
-                className={cls.saveBtn}
-                theme={ButtonTheme.OUTLINE}
-                onClick={onSave}
-              >
-                {t('Save')}
-              </Button>
-            </>
-          )}
-        </div>
+            <Button
+              theme={ButtonTheme.OUTLINE}
+              onClick={onSave}
+            >
+              {t('Save')}
+            </Button>
+          </HStack>
+        )
       )}
-    </div>
+    </HStack>
   )
 }
