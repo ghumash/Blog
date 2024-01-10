@@ -13,5 +13,6 @@
   "First name and Last name is required": "Անուն և ազգանուն դաշտերը պարտադիր են",
   "Server error": "Սերվերային խնդիր",
   "Incorrect country": "Սխալ երկիր",
-  "Incorrect age": "Սխալ տարիք"
+  "Incorrect age": "Սխալ տարիք",
+  "Profile in not defined": "Հաշիվը չի գտնել"
 }

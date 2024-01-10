@@ -13,5 +13,6 @@
   "First name and Last name is required": "First name and Last name is required",
   "Server error": "Server error",
   "Incorrect country": "Incorrect country",
-  "Incorrect age": "Incorrect age"
+  "Incorrect age": "Incorrect age",
+  "Profile in not defined": "Profile in not defined"
 }

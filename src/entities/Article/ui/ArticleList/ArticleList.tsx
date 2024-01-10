@@ -4,10 +4,10 @@ import { HTMLAttributeAnchorTarget, memo } from 'react'
 import { Text, TextSize } from 'shared/ui/Text'
 import { List, ListRowProps, WindowScroller } from 'react-virtualized'
 import { PAGE_ID } from 'widgets/Page'
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import cls from './ArticleList.module.scss'
 import { Article, ArticleView } from '../../model/types/article'
-import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 
 interface ArticleListProps {
   className?: string;
@@ -31,7 +31,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     isLoading,
     target,
   } = props
-  const { t } = useTranslation('articles')
+  const { t } = useTranslation()
 
   const isBig = view === ArticleView.BIG
 
@@ -54,7 +54,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
           article={articles[i]}
           view={view}
           target={target}
-          key={articles[i].id}
+          key={`str${i}`}
           className={cls.card}
         />,
       )
