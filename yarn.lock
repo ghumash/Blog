@@ -1304,7 +1304,7 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@headlessui/react@^1.6.6":
+"@headlessui/react@1.6.6":
   "integrity" "sha512-MFJtmj9Xh/hhBMhLccGbBoSk+sk61BlP6sJe4uQcVMtXZhCgGqd2GyIQzzmsdPdTEWGSF434CBi8mnhR6um46Q=="
   "resolved" "https://registry.npmjs.org/@headlessui/react/-/react-1.6.6.tgz"
   "version" "1.6.6"
@@ -3409,7 +3409,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-virtualized@^9.21.21":
+"@types/react-virtualized@9.21.21":
   "integrity" "sha512-Exx6I7p4Qn+BBA1SRyj/UwQlZ0I0Pq7g7uhAp0QQ4JWzZunqEqNBGTmCmMmS/3N9wFgAGWuBD16ap7k8Y14VPA=="
   "resolved" "https://registry.npmjs.org/@types/react-virtualized/-/react-virtualized-9.21.21.tgz"
   "version" "9.21.21"
@@ -9225,6 +9225,14 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
+"jest-html-reporters@3.0.10":
+  "integrity" "sha512-tkLqYadTi0wGwiFkAUv3cV+IcmdE1YeJC/+BOzutVNeudRZk34GFPGYAKBFVYN6HyJGLaEG0TTf5WCySxwAB5g=="
+  "resolved" "https://registry.npmjs.org/jest-html-reporters/-/jest-html-reporters-3.0.10.tgz"
+  "version" "3.0.10"
+  dependencies:
+    "fs-extra" "^9.0.1"
+    "open" "^8.0.3"
+
 "jest-jasmine2@^27.5.1":
   "integrity" "sha512-jtq7VVyG8SqAorDpApwiJJImd0V2wv1xzdheGHRGyuT7gZm6gG47QEskOlzsN1PG/6WNaCo5pmwMHDf3AkG2pQ=="
   "resolved" "https://registry.npmjs.org/jest-jasmine2/-/jest-jasmine2-27.5.1.tgz"
@@ -10904,7 +10912,7 @@
     "is-docker" "^2.0.0"
     "is-wsl" "^2.1.1"
 
-"open@^8.0.9":
+"open@^8.0.3", "open@^8.0.9":
   "integrity" "sha512-XgFPPM+B28FtCCgSb9I+s9szOC1vZRSwgWsRUA5ylIxRTgKozqjOCrVOqGsYABPYK5qnfqClxZTFBa8PKt2v6Q=="
   "resolved" "https://registry.npmjs.org/open/-/open-8.4.0.tgz"
   "version" "8.4.0"
@@ -12038,7 +12046,7 @@
     "use-composed-ref" "^1.0.0"
     "use-latest" "^1.0.0"
 
-"react-virtualized@^9.22.3":
+"react-virtualized@9.22.3":
   "integrity" "sha512-MKovKMxWTcwPSxE1kK1HcheQTWfuCxAuBoSTf2gwyMM21NdX/PXUhnoP8Uc5dRKd+nKm8v41R36OellhdCpkrw=="
   "resolved" "https://registry.npmjs.org/react-virtualized/-/react-virtualized-9.22.3.tgz"
   "version" "9.22.3"
