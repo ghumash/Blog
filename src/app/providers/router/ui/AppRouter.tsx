@@ -22,8 +22,11 @@ const AppRouter = () => {
 
   return (
     <Routes>
-      {Object.values(routeConfig)
-        .map(renderWithWrapper)}
+      {
+        Object
+          .values(routeConfig)
+          .map(renderWithWrapper)
+      }
     </Routes>
   )
 }

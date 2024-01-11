@@ -9,7 +9,7 @@ describe('getProfileForm.test', () => {
       username: 'admin',
       age: 22,
       country: Country.Ukraine,
-      lastname: 'ulbi tv',
+      lastname: 'ghumash',
       first: 'asd',
       city: 'asf',
       currency: Currency.USD,
@@ -19,10 +19,12 @@ describe('getProfileForm.test', () => {
         form: data,
       },
     }
-    expect(getProfileForm(state as StateSchema)).toEqual(data)
+    expect(getProfileForm(state as StateSchema))
+      .toEqual(data)
   })
   test('should work with empty state', () => {
     const state: DeepPartial<StateSchema> = {}
-    expect(getProfileForm(state as StateSchema)).toEqual(undefined)
+    expect(getProfileForm(state as StateSchema))
+      .toEqual(undefined)
   })
 })

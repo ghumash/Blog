@@ -4,12 +4,15 @@ import { memo, useCallback, useState } from 'react'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUserAuthData, userActions } from 'entities/User'
+import {
+  getUserAuthData, isUserAdmin, isUserManager, userActions,
+} from 'entities/User'
 import { Text, TextTheme } from 'shared/ui/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink'
 import { RoutePath } from 'shared/config/routeConfig'
 import { Dropdown } from 'shared/ui/Dropdown'
 import { Avatar } from 'shared/ui/Avatar'
+import { isUserDeveloper } from 'entities/User/model/selectors/roleSelectors'
 import cls from './Navbar.module.scss'
 
 interface NavbarProps {
@@ -21,6 +24,9 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = useState(false)
   const authData = useSelector(getUserAuthData)
   const dispatch = useDispatch()
+  const isAdmin = useSelector(isUserAdmin)
+  const isManager = useSelector(isUserManager)
+  const isDeveloper = useSelector(isUserDeveloper)
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false)
@@ -33,6 +39,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const onLogout = useCallback(() => {
     dispatch(userActions.logout())
   }, [dispatch])
+
+  const isAdminPanelAvailable = isAdmin || isManager
 
   if (authData) {
     return (
@@ -57,6 +65,14 @@ export const Navbar = memo(({ className }: NavbarProps) => {
               content: t('Profile'),
               href: RoutePath.profile + authData.id,
             },
+            ...(isAdminPanelAvailable ? [{
+              content: t('Admin panel'),
+              href: RoutePath.admin_panel,
+            }] : []),
+            ...(isDeveloper ? [{
+              content: t('Developer panel'),
+              href: RoutePath.developer_panel,
+            }] : []),
             {
               content: t('Logout'),
               onClick: onLogout,
