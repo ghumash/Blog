@@ -46,31 +46,32 @@ export const EditableProfileCardHeader = memo((props: EditableProfileCardHeaderP
       <Text title={t('Profile')} />
       {canEdit && (
         <div>
-          {readonly
-            ? (
+          {readonly ? (
+            <Button
+              theme={ButtonTheme.OUTLINE}
+              onClick={onEdit}
+              data-testid="EditableProfileCardHeader.EditButton"
+            >
+              {t('Edit')}
+            </Button>
+          ) : (
+            <HStack gap="8">
+              <Button
+                theme={ButtonTheme.OUTLINE_RED}
+                onClick={onCancelEdit}
+                data-testid="EditableProfileCardHeader.CancelButton"
+              >
+                {t('Cancel')}
+              </Button>
               <Button
                 theme={ButtonTheme.OUTLINE}
-                onClick={onEdit}
+                onClick={onSave}
+                data-testid="EditableProfileCardHeader.SaveButton"
               >
-                {t('Edit')}
+                {t('Save')}
               </Button>
-            )
-            : (
-              <HStack gap="8">
-                <Button
-                  theme={ButtonTheme.OUTLINE_RED}
-                  onClick={onCancelEdit}
-                >
-                  {t('Cancel')}
-                </Button>
-                <Button
-                  theme={ButtonTheme.OUTLINE}
-                  onClick={onSave}
-                >
-                  {t('Save')}
-                </Button>
-              </HStack>
-            )}
+            </HStack>
+          )}
         </div>
       )}
     </HStack>
