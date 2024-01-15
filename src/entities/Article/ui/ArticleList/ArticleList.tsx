@@ -4,10 +4,11 @@ import { HTMLAttributeAnchorTarget, memo } from 'react'
 import { Text, TextSize } from 'shared/ui/Text'
 import { List, ListRowProps, WindowScroller } from 'react-virtualized'
 import { PAGE_ID } from 'widgets/Page'
+import { ArticleView } from '../../model/consts'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import cls from './ArticleList.module.scss'
-import { Article, ArticleView } from '../../model/types/article'
+import { Article } from '../../model/types/article'
 
 interface ArticleListProps {
   className?: string;

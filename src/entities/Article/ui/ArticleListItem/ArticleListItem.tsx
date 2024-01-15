@@ -9,10 +9,9 @@ import { Avatar } from 'shared/ui/Avatar'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 import { RoutePath } from 'shared/config/routeConfig'
 import { AppLink } from 'shared/ui/AppLink'
+import { ArticleBlockType, ArticleView } from '../../model/consts'
 import cls from './ArticleListItem.module.scss'
-import {
-  Article, ArticleBlockType, ArticleTextBlock, ArticleView,
-} from '../../model/types/article'
+import { Article, ArticleTextBlock } from '../../model/types/article'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 
 interface ArticleListItemProps {
