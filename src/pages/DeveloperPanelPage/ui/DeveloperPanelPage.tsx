@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Page } from 'widgets/Page'
 
 const DeveloperPanelPage = () => {
-  const { t } = useTranslation('developer')
+  const { t } = useTranslation()
 
   return (
     <Page>
