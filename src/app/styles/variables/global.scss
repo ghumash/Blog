@@ -1,8 +1,6 @@
 :root {
   --font-family-main: consolas, "Times New Roman", serif;
 
-  // Fonts
-
   // s
   --font-size-s: 8px;
   --font-line-s: 16px;
@@ -28,11 +26,12 @@
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 80px;
 
-  // Indexes
-  --modal-z-index: 10;
+  // z - Indexes
+  --modal-z-index: 1000;
+  --overlay-z-index: 100;
 
   // Colors
   --overlay-color: rgba(0 0 0 / 60%);
   --red-light: #f00;
-  --red-dark: #c70000;
+  --red-dark: #ce0505;
 }
