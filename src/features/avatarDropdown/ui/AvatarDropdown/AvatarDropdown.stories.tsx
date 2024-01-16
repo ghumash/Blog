@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator'
 import { AvatarDropdown } from './AvatarDropdown'
 
 export default {
@@ -14,3 +15,4 @@ const Template: ComponentStory<typeof AvatarDropdown> = (args) => <AvatarDropdow
 
 export const Normal = Template.bind({})
 Normal.args = {}
+Normal.decorators = [StoreDecorator({})]
