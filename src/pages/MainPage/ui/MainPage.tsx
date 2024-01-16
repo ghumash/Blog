@@ -1,14 +1,20 @@
-import { useTranslation } from 'react-i18next'
-import { memo } from 'react'
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Page } from '@/widgets/Page';
 
-const MainPage = memo(() => {
-  const { t } = useTranslation()
+const MainPage = () => {
+    const { t } = useTranslation();
+    const [value, setValue] = useState('');
 
-  return (
-    <div>
-      {t('Home')}
-    </div>
-  )
-})
+    const onChange = (val: string) => {
+        setValue(val);
+    };
 
-export default MainPage
+    return (
+        <Page>
+            {t('Главная страница')}
+        </Page>
+    );
+};
+
+export default MainPage;

@@ -1,11 +1,6 @@
 {
-  "Article is not defined": "Article is not defined",
-  "There was an error loading the article": "There was an error loading the article",
-  "Type comment...": "Type comment...",
-  "Comments": "Comments",
-  "Back to list": "Back to list",
-  "Recommendations": "Recommendations",
-  "Edit": "Edit",
-  "Editing an article with an ID = ": "Editing an article with an ID = ",
-  "New article": "New article"
+  "Статья не найдена": "Article not found",
+  "Комментарии": "Comments",
+  "Назад к списку": "Back to list",
+  "Рекомендуем": "Recommend"
 }
