@@ -1,6 +1,6 @@
-import { classNames } from 'shared/lib/classNames'
-import './Loader.scss'
 import { memo } from 'react'
+import './Loader.scss'
+import { classNames } from '@/shared/lib/classNames'
 
 interface LoaderProps {
   className?: string;
