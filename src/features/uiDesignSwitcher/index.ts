@@ -1,1 +1,1 @@
-export { UiDesignSwitcher } from './ui/UiDesignSwitcher/UiDesignSwitcher';
+export { UiDesignSwitcher } from './ui/UiDesignSwitcher/UiDesignSwitcher'

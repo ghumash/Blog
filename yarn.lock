@@ -7096,6 +7096,11 @@
   "resolved" "https://registry.npmjs.org/es6-shim/-/es6-shim-0.35.6.tgz"
   "version" "0.35.6"
 
+"esbuild-windows-32@0.15.7":
+  "integrity" "sha512-cOnKXUEPS8EGCzRSFa1x6NQjGhGsFlVgjhqGEbLTPsA7x4RRYiy2RKoArNUU4iR2vHmzqS5Gr84MEumO/wxYKA=="
+  "resolved" "https://registry.npmjs.org/esbuild-windows-32/-/esbuild-windows-32-0.15.7.tgz"
+  "version" "0.15.7"
+
 "esbuild-windows-64@0.15.7":
   "integrity" "sha512-7MI08Ec2sTIDv+zH6StNBKO+2hGUYIT42GmFyW6MBBWWtJhTcQLinKS6ldIN1d52MXIbiJ6nXyCJ+LpL4jBm3Q=="
   "resolved" "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.15.7.tgz"
@@ -7209,6 +7214,14 @@
   dependencies:
     "debug" "^3.2.7"
     "find-up" "^2.1.0"
+
+"eslint-plugin-fsd-checker-by-ghumash@0.0.10":
+  "integrity" "sha512-+vH5W/NknwB8jTwd/p0k6dzDsDC4S3MtJvsglWnwOJLNA9PIilx8hpSFiYlJh+0b3FAbJUeks+hSiI/xl6QVnw=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-fsd-checker-by-ghumash/-/eslint-plugin-fsd-checker-by-ghumash-0.0.10.tgz"
+  "version" "0.0.10"
+  dependencies:
+    "micromatch" "^4.0.5"
+    "requireindex" "^1.2.0"
 
 "eslint-plugin-i18next@^5.1.2":
   "integrity" "sha512-YuJWaio8BE7eoWE2V3UnddwJhf3XNQ2tb7XAKZhbkeA+BWzm33ujOv6Ezm98Wjc8VCyT9NJvDyvs5/a9AG4QpQ=="

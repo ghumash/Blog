@@ -1,1 +1,1 @@
-export { ScrollToolbar } from './ui/ScrollToolbar/ScrollToolbar';
+export { ScrollToolbar } from './ui/ScrollToolbar/ScrollToolbar'
