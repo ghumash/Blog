@@ -24,7 +24,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'ulbi-tv-plugin',
+        'fsd-checker-by-ghumash',
         'unused-imports',
     ],
     rules: {
@@ -86,20 +86,20 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
-        'ulbi-tv-plugin/path-checker': [
+        'fsd-checker-by-ghumash/path-checker': [
             'error',
             {
                 alias: '@',
             },
         ],
-        'ulbi-tv-plugin/layer-imports': [
+        'fsd-checker-by-ghumash/layer-imports': [
             'error',
             {
                 alias: '@',
                 ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
             },
         ],
-        'ulbi-tv-plugin/public-api-imports': [
+        'fsd-checker-by-ghumash/public-api-imports': [
             'error',
             {
                 alias: '@',

@@ -1,4 +1,4 @@
-// eslint-disable-next-line ulbi-tv-plugin/layer-imports
+// eslint-disable-next-line fsd-checker-by-ghumash/layer-imports
 import '@/app/styles/index.scss';
 import { Story } from '@storybook/react';
 

@@ -30,19 +30,19 @@ Normal.parameters = {
                     id: '1',
                     title: 'Уведомление',
                     description:
-                        'Поставь лайк и оставь комментарий под Ulbi TV',
+                        'asdfasdf asdf asd fasd fasd fasd fasd fsa asd f',
                 },
                 {
                     id: '2',
                     title: 'Уведомление 2',
                     description:
-                        'Поставь лайк и оставь комментарий под Ulbi TV',
+                        'asdfasdf asdf asd fasd fasd fasd fasd fsa asd f',
                 },
                 {
                     id: '3',
                     title: 'Уведомление 3',
                     description:
-                        'Поставь лайк и оставь комментарий под Ulbi TV',
+                        'asdfasdf asdf asd fasd fasd fasd fasd fsa asd f',
                 },
             ],
         },
