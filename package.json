@@ -37,9 +37,17 @@
             "eslint"
         ]
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ghumash/Blog.git"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ghumash/Blog/issues"
+    },
+    "homepage": "https://github.com/ghumash/Blog#readme",
     "devDependencies": {
         "@babel/core": "^7.17.5",
         "@babel/plugin-transform-runtime": "^7.18.10",
