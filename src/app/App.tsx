@@ -1,11 +1,9 @@
 import React, { memo, Suspense, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { classNames } from '@/shared/lib/classNames/classNames'
 import { getUserInited, initAuthData } from '@/entities/User'
 import { AppRouter } from './providers/router'
 import { Navbar } from '@/widgets/Navbar'
 import { Sidebar } from '@/widgets/Sidebar'
-import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { ToggleFeatures } from '@/shared/lib/features'
 import { MainLayout } from '@/shared/layouts/MainLayout'
@@ -15,7 +13,6 @@ import { useAppToolbar } from './lib/useAppToolbar'
 import { withTheme } from './providers/ThemeProvider/ui/withTheme'
 
 const App = memo(() => {
-  const { theme } = useTheme()
   const dispatch = useAppDispatch()
   const inited = useSelector(getUserInited)
   const toolbar = useAppToolbar()
@@ -31,7 +28,7 @@ const App = memo(() => {
       <ToggleFeatures
         feature="isAppRedesigned"
         on={
-          <div id="app" className={classNames('app_redesigned', {}, [theme])}>
+          <div id="app" className='app_redesigned'>
             <AppLoaderLayout />{' '}
           </div>
         }
@@ -44,7 +41,7 @@ const App = memo(() => {
     <ToggleFeatures
       feature="isAppRedesigned"
       off={
-        <div id="app" className={classNames('app', {}, [theme])}>
+        <div id="app" className='app'>
           <Suspense fallback="">
             <Navbar />
             <div className="content-page">
@@ -55,7 +52,7 @@ const App = memo(() => {
         </div>
       }
       on={
-        <div id="app" className={classNames('app_redesigned', {}, [theme])}>
+        <div id="app" className='app_redesigned'>
           <Suspense fallback="">
             <MainLayout
               header={<Navbar />}

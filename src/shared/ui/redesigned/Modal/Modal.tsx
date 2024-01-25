@@ -42,8 +42,6 @@ export const Modal = (props: ModalProps) => {
       <div
         className={classNames(cls.Modal, mods, [
           className,
-          theme,
-          'app_modal',
           toggleFeatures({
             name: 'isAppRedesigned',
             on: () => cls.modalNew,
