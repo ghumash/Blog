@@ -4,12 +4,12 @@
 ### Login as admin
 login: admin
 
-password: admin123
+password: 123
 
 ### Login as user
 login: user
 
-password: user123
+password: 123
 
 
 ## Запуск проекта
