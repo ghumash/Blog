@@ -12,8 +12,19 @@ const MainPage = () => {
 
   return (
     <Page data-testid="MainPage">
-      <div>123123123123123123</div>
-      {t('Главная страница')}
+      <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <div>
+          <p>login as admin</p>
+          <p>login: admin</p>
+          <p>password: 123</p>
+        </div>
+        <div>
+          <p>login as user</p>
+          <p>login: user</p>
+          <p>password: 123</p>
+        </div>
+      </div>
+      {/*{t('Главная страница')}*/}
     </Page>
   )
 }
